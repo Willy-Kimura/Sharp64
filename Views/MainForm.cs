@@ -678,6 +678,11 @@ namespace WK.Apps.Sharp64.Views
             EncodeFile(true);
         }
 
+        private void NotifyIcon_Click(object sender, EventArgs e)
+        {
+            ShowOrHide();
+        }
+
         #endregion
     }
 }
