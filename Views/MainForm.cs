@@ -9,6 +9,9 @@ using Transitions;
 using Bunifu.UI.WinForms;
 
 using WK.Apps.Sharp64.Helpers;
+using WK.Libraries.HotkeyListenerNS;
+using WK.Apps.Sharp64.Models.Settings;
+using WK.Apps.TranslatrNS.Controllers.Settings;
 
 namespace WK.Apps.Sharp64.Views
 {
@@ -19,6 +22,8 @@ namespace WK.Apps.Sharp64.Views
         public MainForm()
         {
             InitializeComponent();
+
+            _instance = this;
         }
 
         #endregion
@@ -27,17 +32,36 @@ namespace WK.Apps.Sharp64.Views
 
         // These two lists are used to save the controls
         // contained within the two panels when swapping.
-        List<Control> panel1Controls = new List<Control>();
-        List<Control> panel2Controls = new List<Control>();
+        private List<Control> _panel1Controls = new List<Control>();
+        private List<Control> _panel2Controls = new List<Control>();
 
         // These are used to minimize the window 
         // using the CreateParams override.
         private const int CS_DBLCLKS = 0x8;
         private const int WS_MINIMIZEBOX = 0x20000;
 
+        private static MainForm _instance;
+        private Settings _settings = new Settings();
+        public static HotkeyListener HotkeyListener = new HotkeyListener();
+
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// Gets an instance of the MainForm.
+        /// </summary>
+        public static MainForm Instance
+        {
+            get {
+
+                if (_instance == null)
+                    _instance = new MainForm();
+
+                return _instance;
+
+            }
+        }
 
         /// <summary>
         /// Gets or sets a value indicating whether the 
@@ -50,6 +74,19 @@ namespace WK.Apps.Sharp64.Views
         /// the Image Viewer is visible.
         /// </summary>
         public bool ImageViewerVisible { get => pnlImageViewer.Visible; }
+
+        /// <summary>
+        /// Gets or sets the application's settings. 
+        /// Use the <see cref="SettingsManager"/> 
+        /// to read or write to the application's settings.
+        /// </summary>
+        public static AppSettings ApplicationSettings { get; set; }
+
+        /// <summary>
+        /// Lets you manage the application's settings by 
+        /// using the provided <see cref="ApplicationSettings"/> object.
+        /// </summary>
+        public static SettingsController SettingsManager { get; set; } = new SettingsController();
 
         #endregion
 
@@ -113,6 +150,23 @@ namespace WK.Apps.Sharp64.Views
                 };
             }
             catch (Exception) { }
+        }
+
+        /// <summary>
+        /// Overriden the default parameters to 
+        /// provide window minimizing features.
+        /// </summary>
+        protected override CreateParams CreateParams
+        {
+            get {
+
+                CreateParams cp = base.CreateParams;
+
+                cp.Style |= WS_MINIMIZEBOX;
+                cp.ClassStyle |= CS_DBLCLKS;
+
+                return cp;
+            }
         }
 
         #endregion
@@ -216,6 +270,36 @@ namespace WK.Apps.Sharp64.Views
         }
 
         /// <summary>
+        /// Restores the window.
+        /// </summary>
+        public void Restore()
+        {
+            if (bunifuFormDock1.WindowState ==
+                BunifuFormDock.FormWindowStates.Minimized)
+            {
+                bunifuFormDock1.WindowState = BunifuFormDock.FormWindowStates.Normal;
+                WindowState = FormWindowState.Normal;
+
+                if (DefaultConversion)
+                    txtRaw.Focus();
+                else
+                    txtConversion.Focus();
+
+                return;
+            }
+
+            if (notifyIcon1.Visible)
+                Show();
+
+            if (DefaultConversion)
+                txtRaw.Focus();
+            else
+                txtConversion.Focus();
+
+            Activate();
+        }
+
+        /// <summary>
         /// Pins the window to the System Tray area.
         /// </summary>
         public void PinToSystemTray()
@@ -237,33 +321,17 @@ namespace WK.Apps.Sharp64.Views
 
                 bunifuToolTip1.SetToolTip(pbAppIcon, $"v{Application.ProductVersion}");
 
+                TopMost = ApplicationSettings.TopMost;
                 Text = $"{Application.ProductName} v{Application.ProductVersion}";
                 notifyIcon1.Text = Text;
             }
             catch (Exception) { }
         }
 
-        /// <summary>
-        /// Overriden the default parameters to 
-        /// provide window minimizing features.
-        /// </summary>
-        protected override CreateParams CreateParams
-        {
-            get {
-
-                CreateParams cp = base.CreateParams;
-
-                cp.Style |= WS_MINIMIZEBOX;
-                cp.ClassStyle |= CS_DBLCLKS;
-
-                return cp;
-            }
-        }
-
         #endregion
 
         #region Features Management
-
+        
         /// <summary>
         /// Displays the image viewer panel.
         /// </summary>
@@ -308,6 +376,22 @@ namespace WK.Apps.Sharp64.Views
                 HideImageViewer();
             else
                 ShowImageViewer();
+        }
+
+        /// <summary>
+        /// Shows the settings window.
+        /// </summary>
+        private void ShowSettings()
+        {
+            _settings.Show();
+        }
+
+        /// <summary>
+        /// Updates and saves the current application settings.
+        /// </summary>
+        public static void ApplySettings()
+        {
+            SettingsManager.SetAppSettings(ApplicationSettings);
         }
 
         /// <summary>
@@ -500,26 +584,26 @@ namespace WK.Apps.Sharp64.Views
         /// </summary>
         public void SwapSides()
         {
-            panel1Controls.Clear();
-            panel2Controls.Clear();
+            _panel1Controls.Clear();
+            _panel2Controls.Clear();
 
             foreach (Control control in splitContainer1.Panel1.Controls)
             {
                 if (control is Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox)
                 {
-                    panel1Controls.Add(control);
+                    _panel1Controls.Add(control);
                     splitContainer1.Panel1.Controls.Remove(control);
                 }
             }
 
             foreach (Control control in splitContainer1.Panel2.Controls)
             {
-                panel2Controls.Add(control);
+                _panel2Controls.Add(control);
             }
 
             splitContainer1.Panel2.Controls.Clear();
 
-            foreach (Control hostedControl in panel1Controls)
+            foreach (Control hostedControl in _panel1Controls)
             {
                 if (hostedControl is Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox)
                 {
@@ -529,7 +613,7 @@ namespace WK.Apps.Sharp64.Views
                 splitContainer1.Panel2.Controls.Add(hostedControl);
             }
 
-            foreach (Control hostedControl in panel2Controls)
+            foreach (Control hostedControl in _panel2Controls)
             {
                 if (hostedControl is Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox)
                 {
@@ -553,6 +637,53 @@ namespace WK.Apps.Sharp64.Views
             }
         }
 
+        /// <summary>
+        /// Registers the user-applied hotkeys.
+        /// </summary>
+        public void RegisterHotkeys()
+        {
+            HotkeyListener.AddHotkey(ApplicationSettings.SelectionHotkey);
+            HotkeyListener.HotkeyPressed += OnHotkeyPressed;
+        }
+
+        /// <summary>
+        /// Encodes the selected text from any application.
+        /// </summary>
+        public void EncodeDecodeSelection()
+        {
+            if (!TopMost)
+                TopMost = true;
+
+            string clipboardText = Clipboard.GetText();
+            SendKeys.SendWait("^c");
+
+            string selection = Clipboard.GetText();
+            Clipboard.SetText(clipboardText);
+            
+            Restore();
+
+            if (DefaultConversion)
+            {
+                if (EncoderDecoder.IsBase64Formatted(selection))
+                {
+                    txtConversion.Input.Focus();
+                    txtConversion.Text = selection;
+                }
+                else
+                {
+                    txtRaw.Input.Focus();
+                    txtRaw.Text = selection;
+                }
+            }
+            else
+            {
+                txtConversion.Input.Focus();
+                txtConversion.Text = selection;
+            }
+
+            TopMost = ApplicationSettings.TopMost;
+        }
+
         #endregion
 
         #endregion
@@ -565,7 +696,10 @@ namespace WK.Apps.Sharp64.Views
             // the window when loading.
             Show();
 
+            ApplicationSettings = SettingsManager.GetAppSettings();
+
             ApplyWindowSettings();
+            RegisterHotkeys();
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
@@ -635,7 +769,19 @@ namespace WK.Apps.Sharp64.Views
 
             if (e.KeyCode == Keys.Escape)
             {
-                MinimizeRestore();
+                Minimize();
+            }
+        }
+
+        private void OnHotkeyPressed(object sender, HotkeyEventArgs e)
+        {
+            if (e.Hotkey == ApplicationSettings.SelectionHotkey)
+            {
+                if (ApplicationSettings.AllowHotkeySelections &&
+                    !string.IsNullOrWhiteSpace(ApplicationSettings.SelectionHotkey))
+                {
+                    EncodeDecodeSelection();
+                }
             }
         }
 
@@ -651,6 +797,11 @@ namespace WK.Apps.Sharp64.Views
         private void BtnSwapSides_Click(object sender, EventArgs e)
         {
             SwapSides();
+        }
+
+        private void PbSettings_Click(object sender, EventArgs e)
+        {
+            ShowSettings();
         }
 
         private void PbMaximize_Click(object sender, EventArgs e)
