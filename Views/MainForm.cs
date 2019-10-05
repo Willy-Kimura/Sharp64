@@ -801,6 +801,7 @@ namespace WK.Apps.Sharp64.Views
 
         private void PbSettings_Click(object sender, EventArgs e)
         {
+            new HotkeyPopup().Show();
             ShowSettings();
         }
 

@@ -5,15 +5,13 @@ using System.Windows.Forms;
 using Transitions;
 using Bunifu.UI.WinForms;
 
-using WK.Libraries.HotkeyListenerNS;
-
 namespace WK.Apps.Sharp64.Views
 {
-    public partial class Settings : Form
+    public partial class HotkeyPopup : Form
     {
         #region Constructor
 
-        public Settings()
+        public HotkeyPopup()
         {
             InitializeComponent();
         }
@@ -22,8 +20,6 @@ namespace WK.Apps.Sharp64.Views
 
         #region Fields
         
-        public HotkeySelector HotkeySelector = new HotkeySelector();
-
         #endregion
 
         #region Methods
@@ -39,7 +35,7 @@ namespace WK.Apps.Sharp64.Views
 
             base.Show();
 
-            Transition.run(this, "Opacity", 1.0, new TransitionType_EaseInEaseOut(500));
+            Transition.run(this, "Opacity", 1.0, new TransitionType_EaseInEaseOut(220));
         }
 
         /// <summary>
@@ -65,7 +61,7 @@ namespace WK.Apps.Sharp64.Views
         {
             try
             {
-                Transition transition = new Transition(new TransitionType_EaseInEaseOut(400));
+                Transition transition = new Transition(new TransitionType_EaseInEaseOut(220));
 
                 transition.add(this, "Opacity", 0.0);
                 transition.run();
@@ -88,19 +84,6 @@ namespace WK.Apps.Sharp64.Views
         {
             bunifuFormDock1.SubscribeControlsToDragEvents(
                 new Control[] { lblTitle, pbAppIcon }, true);
-
-            // Suspend hotkeys to prevent invoking 
-            // feature when changing hotkeys.
-            MainForm.HotkeyListener.SuspendHotkeys();
-
-            HotkeySelector.Enable(txtHotkey.Input);
-            txtHotkey.Text = MainForm.ApplicationSettings.SelectionHotkey;
-
-            chkEnableHotkeySelection.Checked = 
-                MainForm.ApplicationSettings.AllowHotkeySelections;
-
-            chkTopmost.Checked = MainForm.ApplicationSettings.TopMost;
-            chkShowPopup.Checked = MainForm.ApplicationSettings.ShowPopup;
         }
 
         private void Settings_Shown(object sender, EventArgs e)
@@ -110,18 +93,7 @@ namespace WK.Apps.Sharp64.Views
 
         private void Settings_Deactivate(object sender, EventArgs e)
         {
-            MainForm.ApplicationSettings.SelectionHotkey = txtHotkey.Text;
-            MainForm.ApplicationSettings.ShowPopup = chkShowPopup.Checked;
-            MainForm.ApplicationSettings.AllowHotkeySelections = chkEnableHotkeySelection.Checked;
-            MainForm.ApplicationSettings.TopMost = chkTopmost.Checked;
-            MainForm.Instance.TopMost = chkTopmost.Checked;
-
-            MainForm.ApplySettings();
-
-            // Resume using the applied hotkeys when closed.
-            MainForm.HotkeyListener.ResumeHotkeys();
-
-            Hide();
+            
         }
 
         private void txtHotkey_TextChanged(object sender, EventArgs e)
@@ -133,12 +105,7 @@ namespace WK.Apps.Sharp64.Views
         {
             Hide();
         }
-
-        private void pbMinimize_Click(object sender, EventArgs e)
-        {
-            bunifuFormDock1.WindowState = BunifuFormDock.FormWindowStates.Minimized;
-        }
-
+        
         #endregion
     }
 }
