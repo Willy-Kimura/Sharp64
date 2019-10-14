@@ -1036,9 +1036,9 @@
   <data name="chkTopmost.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABlSURBVDhPY6AZ6NZ+7NCl/eg+EP+nEN/v0nrkATa0U/vR
-        8x6d+xpgDgWgXf2+AtDg72AOyBYwgwoAbtaooaOGUgeMGjpqKDKDCoDmhn6vl7/PAeZQCOCGdmg/LABx
-        qIE7tR82AADOBMaJzbdmtwAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVDhPY6AZKK+e7lBZM+1+Ze30/xRhoBkV1VM8wIZW
+        1kx/Xlk/UwPMoQCU109XqKiZ9h3MAdkCZlABwM0aNXTUUOqAUUNHDUVmUAHQ1lBQwVpfP58DzKEQIAyt
+        nVYA4lAHT28AAIH/w5mzrSe7AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="lblTopmost.BaseStylesheet" xml:space="preserve">
@@ -1116,8 +1116,8 @@
   </data>
   <data name="pbEnableHotkeySelectionInfo.ToolTip" xml:space="preserve">
     <value>First, let's start by defining a &lt;b&gt;hotkey&lt;/b&gt;.
-A &lt;i&gt;hotkey&lt;/i&gt; is a key or combination of keys that when 
-pressed performs a certain function in an application.
+A hotkey is a key or combination of keys that when pressed 
+performs a certain function in an application.
 
 By using this feature, you are able to encode/deocde any text 
 you've selected in any application through the use of a global 

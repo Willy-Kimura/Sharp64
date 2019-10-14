@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.pbAppIcon = new System.Windows.Forms.PictureBox();
             this.pbMinimize = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -43,8 +43,8 @@
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.chkTopmost = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.lblTopmost = new Bunifu.UI.WinForms.BunifuLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlEnableHotkeySelection = new System.Windows.Forms.Panel();
             this.pbShowPopupInfo = new System.Windows.Forms.PictureBox();
             this.lblShowPopup = new Bunifu.UI.WinForms.BunifuLabel();
@@ -287,7 +287,7 @@
             this.chkTopmost.OnHoverUnchecked.BorderRadius = 2;
             this.chkTopmost.OnHoverUnchecked.BorderThickness = 1;
             this.chkTopmost.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkTopmost.OnUncheck.BorderColor = System.Drawing.Color.BlueViolet;
+            this.chkTopmost.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
             this.chkTopmost.OnUncheck.BorderRadius = 2;
             this.chkTopmost.OnUncheck.BorderThickness = 1;
             this.chkTopmost.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
@@ -299,20 +299,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.chkTopmost, null);
             this.chkTopmost.ToolTipText = null;
             this.bunifuToolTip1.SetToolTipTitle(this.chkTopmost, "");
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblTopmost);
-            this.panel1.Controls.Add(this.chkTopmost);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 46);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(487, 65);
-            this.panel1.TabIndex = 16;
-            this.bunifuToolTip1.SetToolTip(this.panel1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.panel1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.panel1, "");
             // 
             // lblTopmost
             // 
@@ -333,6 +319,20 @@
             this.bunifuToolTip1.SetToolTip(this.lblTopmost, "");
             this.bunifuToolTip1.SetToolTipIcon(this.lblTopmost, null);
             this.bunifuToolTip1.SetToolTipTitle(this.lblTopmost, "");
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblTopmost);
+            this.panel1.Controls.Add(this.chkTopmost);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(487, 65);
+            this.panel1.TabIndex = 16;
+            this.bunifuToolTip1.SetToolTip(this.panel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panel1, "");
             // 
             // pnlEnableHotkeySelection
             // 
@@ -432,7 +432,7 @@
             this.chkShowPopup.OnHoverUnchecked.BorderRadius = 2;
             this.chkShowPopup.OnHoverUnchecked.BorderThickness = 1;
             this.chkShowPopup.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkShowPopup.OnUncheck.BorderColor = System.Drawing.Color.BlueViolet;
+            this.chkShowPopup.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
             this.chkShowPopup.OnUncheck.BorderRadius = 2;
             this.chkShowPopup.OnUncheck.BorderThickness = 1;
             this.chkShowPopup.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
@@ -499,26 +499,26 @@
             this.txtHotkey.Modified = false;
             this.txtHotkey.Multiline = false;
             this.txtHotkey.Name = "txtHotkey";
-            stateProperties1.BorderColor = System.Drawing.Color.MediumPurple;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties1.ForeColor = System.Drawing.Color.White;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtHotkey.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.Empty;
-            stateProperties2.FillColor = System.Drawing.Color.White;
-            stateProperties2.ForeColor = System.Drawing.Color.Empty;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtHotkey.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.MediumPurple;
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties3.ForeColor = System.Drawing.Color.White;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtHotkey.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtHotkey.OnIdleState = stateProperties4;
+            stateProperties13.BorderColor = System.Drawing.Color.MediumPurple;
+            stateProperties13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties13.ForeColor = System.Drawing.Color.White;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtHotkey.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.Empty;
+            stateProperties14.FillColor = System.Drawing.Color.White;
+            stateProperties14.ForeColor = System.Drawing.Color.Empty;
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtHotkey.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.MediumPurple;
+            stateProperties15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties15.ForeColor = System.Drawing.Color.White;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtHotkey.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
+            stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties16.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtHotkey.OnIdleState = stateProperties16;
             this.txtHotkey.PasswordChar = '\0';
             this.txtHotkey.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtHotkey.PlaceholderText = "press your keys here...";
@@ -618,7 +618,7 @@
             this.chkEnableHotkeySelection.OnHoverUnchecked.BorderRadius = 2;
             this.chkEnableHotkeySelection.OnHoverUnchecked.BorderThickness = 1;
             this.chkEnableHotkeySelection.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkEnableHotkeySelection.OnUncheck.BorderColor = System.Drawing.Color.BlueViolet;
+            this.chkEnableHotkeySelection.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
             this.chkEnableHotkeySelection.OnUncheck.BorderRadius = 2;
             this.chkEnableHotkeySelection.OnUncheck.BorderThickness = 1;
             this.chkEnableHotkeySelection.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;

@@ -164,7 +164,7 @@
             this.pbDonate.ShowSizeMarkers = false;
             this.pbDonate.Size = new System.Drawing.Size(40, 40);
             this.pbDonate.TabIndex = 23;
-            this.bunifuToolTip1.SetToolTip(this.pbDonate, "Donate to this wondeful project...");
+            this.bunifuToolTip1.SetToolTip(this.pbDonate, "Give a thank-you donation to this project...");
             this.bunifuToolTip1.SetToolTipIcon(this.pbDonate, null);
             this.pbDonate.ToolTipText = "";
             this.bunifuToolTip1.SetToolTipTitle(this.pbDonate, "");
@@ -379,7 +379,7 @@
             this.pbMaximize.ShowSizeMarkers = false;
             this.pbMaximize.Size = new System.Drawing.Size(40, 40);
             this.pbMaximize.TabIndex = 17;
-            this.bunifuToolTip1.SetToolTip(this.pbMaximize, "Mazimize");
+            this.bunifuToolTip1.SetToolTip(this.pbMaximize, "Maximize");
             this.bunifuToolTip1.SetToolTipIcon(this.pbMaximize, null);
             this.pbMaximize.ToolTipText = "";
             this.bunifuToolTip1.SetToolTipTitle(this.pbMaximize, "");
