@@ -348,8 +348,8 @@
             this.btnSwapSides.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSwapSides.AnimationSpeed = 200;
             this.btnSwapSides.BackColor = System.Drawing.Color.Transparent;
-            this.btnSwapSides.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(88)))));
-            this.btnSwapSides.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(88)))));
+            this.btnSwapSides.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(93)))));
+            this.btnSwapSides.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(93)))));
             this.btnSwapSides.BorderRadius = 2;
             this.btnSwapSides.BorderThickness = 1;
             this.btnSwapSides.ColorContrastOnClick = 60;
