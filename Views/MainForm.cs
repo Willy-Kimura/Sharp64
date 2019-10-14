@@ -1,4 +1,18 @@
-﻿using System;
+﻿#region Copyright
+
+/*
+ * Developer: Willy Kimura.
+ * Product:   Sharp64 - A Base64 Encoder/Decoder
+ * 
+ * A product of Willy Kimura.
+ * Copyright (c) 2019.
+ * 
+ */
+
+#endregion
+
+
+using System;
 using System.IO;
 using System.Drawing;
 using System.Threading;
@@ -481,7 +495,7 @@ namespace WK.Apps.Sharp64.Views
         /// <param name="allowImagesOnly">
         /// Allow only supported images to be selected?
         /// </param>
-        public void EncodeFile(bool allowImagesOnly = false)
+        public void ChooseFile(bool allowImagesOnly = false)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
 
@@ -497,7 +511,8 @@ namespace WK.Apps.Sharp64.Views
             fileDialog.Filter =
                 // Text filters.
                 (allowImagesOnly ? "" :
-                "Encoded Files |*.enc;*enci;*.txt;|Code Files |*.html;*.css;*.js;*.php;*.cs;" +
+                "Encoded Files |*.enc;*enci;*.txt;|" +
+                "Others |*.html;*.css;*.js;*.php;*.cs;" +
                 "*.java;*.py;*.rb;*.ps;*.ps1;*.vb|") +
                 // Image filters.
                 "Images |*.enci;*.jpg;*.jpeg;*.gif;*.png;*.ico;*.tif;*.tiff";
@@ -568,7 +583,7 @@ namespace WK.Apps.Sharp64.Views
         /// <summary>
         /// Saves the currently encoded text or image as a file.
         /// </summary>
-        public void SaveEncodingAsFile()
+        public void SaveEncoding()
         {
             if (!string.IsNullOrWhiteSpace(txtConversion.Text))
             {
@@ -576,7 +591,7 @@ namespace WK.Apps.Sharp64.Views
 
                 fileDialog.RestoreDirectory = true;
                 fileDialog.SupportMultiDottedExtensions = true;
-                fileDialog.Title = "Save encoding as file...";
+                fileDialog.Title = "Save encoding...";
                 fileDialog.Filter = 
                     $"{(ImageViewerVisible ? "Encoded Images (*.enci)|*.enci|" : "")}" +
                     "Encoded Files (*.enc)|*.enc|Text Files (*.txt)|*.txt";
@@ -765,7 +780,7 @@ namespace WK.Apps.Sharp64.Views
             if (e.Modifiers == Keys.Control && 
                 e.KeyCode == Keys.O)
             {
-                EncodeFile();
+                ChooseFile();
 
                 e.Handled = true;
                 e.SuppressKeyPress = true;
@@ -774,7 +789,7 @@ namespace WK.Apps.Sharp64.Views
             if (e.Modifiers == Keys.Control &&
                 e.KeyCode == Keys.S)
             {
-                SaveEncodingAsFile();
+                SaveEncoding();
 
                 e.Handled = true;
                 e.SuppressKeyPress = true;
@@ -865,7 +880,7 @@ namespace WK.Apps.Sharp64.Views
 
         private void PbChooseImage_Click(object sender, EventArgs e)
         {
-            EncodeFile(true);
+            ChooseFile(true);
         }
 
         private void pbDonate_Click(object sender, EventArgs e)

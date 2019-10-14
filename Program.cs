@@ -1,4 +1,18 @@
-﻿using System;
+﻿#region Copyright
+
+/*
+ * Developer: Willy Kimura.
+ * Product:   Sharp64 - A Base64 Encoder/Decoder
+ * 
+ * A product of Willy Kimura.
+ * Copyright (c) 2019.
+ * 
+ */
+
+#endregion
+
+
+using System;
 using System.Windows.Forms;
 
 namespace WK.Apps.Sharp64
