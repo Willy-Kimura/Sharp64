@@ -388,6 +388,17 @@ namespace WK.Apps.Sharp64.Views
         }
 
         /// <summary>
+        /// Displays the hotkey list control.
+        /// </summary>
+        public void ShowHotkeyList()
+        {
+            hotkeyList1.Show();
+            hotkeyList1.BringToFront();
+
+            txtConversion.Text = string.Empty;
+        }
+
+        /// <summary>
         /// Displays the Hotkey popup window and assigns 
         /// the text that underwent Base64 conversion.
         /// </summary>
@@ -737,6 +748,7 @@ namespace WK.Apps.Sharp64.Views
             // This will simply animate 
             // the window when loading.
             Show();
+            ShowHotkeyList();
 
             ApplicationSettings = SettingsManager.GetAppSettings();
 
@@ -753,10 +765,7 @@ namespace WK.Apps.Sharp64.Views
         {
             if (string.IsNullOrWhiteSpace(txtRaw.Text))
             {
-                hotkeyList1.Show();
-                hotkeyList1.BringToFront();
-
-                txtConversion.Text = string.Empty;
+                ShowHotkeyList();
             }
             else
             {

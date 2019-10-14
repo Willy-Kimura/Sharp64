@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
@@ -40,18 +41,9 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
-            this.bdrSeparator1 = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlImageViewer = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
-            this.lblImageFilename = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pgiLoader = new ProgressControls.ProgressIndicator();
-            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.pbDonate = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pbSettings = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnSwapSides = new Bunifu.UI.WinForms.BunifuUserControl();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -59,20 +51,28 @@
             this.pbMinimize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pbMaximize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pbExit = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.bdrSeparator1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.txtRaw = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlImageViewer = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
             this.pbImageViewer = new System.Windows.Forms.PictureBox();
             this.pbChooseImage = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.lblImageFilename = new Bunifu.UI.WinForms.BunifuLabel();
             this.pbCloseImageViewer = new Bunifu.UI.WinForms.BunifuImageButton();
             this.txtConversion = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.pbDonate = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.pgiLoader = new ProgressControls.ProgressIndicator();
+            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.hotkeyList1 = new WK.Apps.Sharp64.Views.Controls.HotkeyList();
             this.pnlTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.pnlImageViewer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageViewer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,174 +137,41 @@
             this.bunifuToolTip1.SetToolTipIcon(this.pnlTitleBar, null);
             this.bunifuToolTip1.SetToolTipTitle(this.pnlTitleBar, "");
             // 
-            // bdrSeparator1
+            // pbDonate
             // 
-            this.bdrSeparator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            this.bdrSeparator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bdrSeparator1.Enabled = false;
-            this.bdrSeparator1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bdrSeparator1.Location = new System.Drawing.Point(0, 45);
-            this.bdrSeparator1.Name = "bdrSeparator1";
-            this.bdrSeparator1.Size = new System.Drawing.Size(839, 1);
-            this.bdrSeparator1.TabIndex = 15;
-            this.bunifuToolTip1.SetToolTip(this.bdrSeparator1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bdrSeparator1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bdrSeparator1, "");
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitle.Location = new System.Drawing.Point(34, 14);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(64, 16);
-            this.lblTitle.TabIndex = 13;
-            this.lblTitle.Text = "Sharp64";
-            this.bunifuToolTip1.SetToolTip(this.lblTitle, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.lblTitle, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.lblTitle, "");
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(4, 47);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.hotkeyList1);
-            this.splitContainer1.Panel1.Controls.Add(this.txtRaw);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Controls.Add(this.pnlImageViewer);
-            this.bunifuToolTip1.SetToolTip(this.splitContainer1.Panel1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.splitContainer1.Panel1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.splitContainer1.Panel1, "");
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.txtConversion);
-            this.splitContainer1.Panel2.Controls.Add(this.pgiLoader);
-            this.bunifuToolTip1.SetToolTip(this.splitContainer1.Panel2, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.splitContainer1.Panel2, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.splitContainer1.Panel2, "");
-            this.splitContainer1.Size = new System.Drawing.Size(832, 441);
-            this.splitContainer1.SplitterDistance = 417;
-            this.splitContainer1.TabIndex = 14;
-            this.bunifuToolTip1.SetToolTip(this.splitContainer1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.splitContainer1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.splitContainer1, "");
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(416, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1, 441);
-            this.label1.TabIndex = 16;
-            this.bunifuToolTip1.SetToolTip(this.label1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.label1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.label1, "");
-            // 
-            // pnlImageViewer
-            // 
-            this.pnlImageViewer.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlImageViewer.Controls.Add(this.pbImageViewer);
-            this.pnlImageViewer.Controls.Add(this.pbChooseImage);
-            this.pnlImageViewer.Controls.Add(this.lblImageFilename);
-            this.pnlImageViewer.Controls.Add(this.pbCloseImageViewer);
-            this.pnlImageViewer.Location = new System.Drawing.Point(2, 5);
-            this.pnlImageViewer.Name = "pnlImageViewer";
-            this.pnlImageViewer.PanelColor = System.Drawing.Color.Empty;
-            this.pnlImageViewer.ShadowDept = 2;
-            this.pnlImageViewer.ShadowTopLeftVisible = true;
-            this.pnlImageViewer.Size = new System.Drawing.Size(407, 433);
-            this.pnlImageViewer.TabIndex = 3;
-            this.bunifuToolTip1.SetToolTip(this.pnlImageViewer, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.pnlImageViewer, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.pnlImageViewer, "");
-            this.pnlImageViewer.Visible = false;
-            this.pnlImageViewer.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.PnlImageViewer_PreviewKeyDown);
-            // 
-            // lblImageFilename
-            // 
-            this.lblImageFilename.AutoEllipsis = true;
-            this.lblImageFilename.AutoSize = false;
-            this.lblImageFilename.CursorType = null;
-            this.lblImageFilename.Font = new System.Drawing.Font("Cascadia Code", 9.75F);
-            this.lblImageFilename.ForeColor = System.Drawing.Color.White;
-            this.lblImageFilename.Location = new System.Drawing.Point(21, 20);
-            this.lblImageFilename.Name = "lblImageFilename";
-            this.lblImageFilename.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblImageFilename.Size = new System.Drawing.Size(293, 18);
-            this.lblImageFilename.TabIndex = 19;
-            this.lblImageFilename.Text = "...";
-            this.lblImageFilename.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblImageFilename.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.bunifuToolTip1.SetToolTip(this.lblImageFilename, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.lblImageFilename, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.lblImageFilename, "");
-            // 
-            // pgiLoader
-            // 
-            this.pgiLoader.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pgiLoader.CircleColor = System.Drawing.Color.LightGray;
-            this.pgiLoader.Location = new System.Drawing.Point(189, 193);
-            this.pgiLoader.Name = "pgiLoader";
-            this.pgiLoader.Percentage = 0F;
-            this.pgiLoader.Size = new System.Drawing.Size(33, 33);
-            this.pgiLoader.TabIndex = 2;
-            this.pgiLoader.Text = "progressIndicator1";
-            this.bunifuToolTip1.SetToolTip(this.pgiLoader, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.pgiLoader, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.pgiLoader, "");
-            this.pgiLoader.Visible = false;
-            // 
-            // bunifuToolTip1
-            // 
-            this.bunifuToolTip1.Active = true;
-            this.bunifuToolTip1.AlignTextWithTitle = false;
-            this.bunifuToolTip1.AllowAutoClose = false;
-            this.bunifuToolTip1.AllowFading = true;
-            this.bunifuToolTip1.AutoCloseDuration = 5000;
-            this.bunifuToolTip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.bunifuToolTip1.ClickToShowDisplayControl = false;
-            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
-            this.bunifuToolTip1.DisplayControl = null;
-            this.bunifuToolTip1.EntryAnimationSpeed = 350;
-            this.bunifuToolTip1.ExitAnimationSpeed = 200;
-            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
-            this.bunifuToolTip1.IconMargin = 6;
-            this.bunifuToolTip1.InitialDelay = 0;
-            this.bunifuToolTip1.Name = "bunifuToolTip1";
-            this.bunifuToolTip1.Opacity = 1D;
-            this.bunifuToolTip1.OverrideToolTipTitles = false;
-            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
-            this.bunifuToolTip1.ReshowDelay = 100;
-            this.bunifuToolTip1.ShowAlways = true;
-            this.bunifuToolTip1.ShowBorders = false;
-            this.bunifuToolTip1.ShowIcons = true;
-            this.bunifuToolTip1.ShowShadows = true;
-            this.bunifuToolTip1.Tag = null;
-            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuToolTip1.TextMargin = 2;
-            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.White;
-            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
-            this.bunifuToolTip1.ToolTipTitle = null;
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "Sharp64";
-            this.notifyIcon1.Click += new System.EventHandler(this.NotifyIcon_Click);
+            this.pbDonate.ActiveImage = null;
+            this.pbDonate.AllowAnimations = true;
+            this.pbDonate.AllowBuffering = false;
+            this.pbDonate.AllowZooming = false;
+            this.pbDonate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDonate.BackColor = System.Drawing.Color.Transparent;
+            this.pbDonate.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbDonate.ErrorImage")));
+            this.pbDonate.FadeWhenInactive = true;
+            this.pbDonate.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.pbDonate.Image = ((System.Drawing.Image)(resources.GetObject("pbDonate.Image")));
+            this.pbDonate.ImageActive = null;
+            this.pbDonate.ImageLocation = null;
+            this.pbDonate.ImageMargin = 22;
+            this.pbDonate.ImageSize = new System.Drawing.Size(18, 18);
+            this.pbDonate.ImageZoomSize = new System.Drawing.Size(40, 40);
+            this.pbDonate.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbDonate.InitialImage")));
+            this.pbDonate.Location = new System.Drawing.Point(648, 4);
+            this.pbDonate.Name = "pbDonate";
+            this.pbDonate.Rotation = 0;
+            this.pbDonate.ShowActiveImage = true;
+            this.pbDonate.ShowCursorChanges = true;
+            this.pbDonate.ShowImageBorders = true;
+            this.pbDonate.ShowSizeMarkers = false;
+            this.pbDonate.Size = new System.Drawing.Size(40, 40);
+            this.pbDonate.TabIndex = 23;
+            this.bunifuToolTip1.SetToolTip(this.pbDonate, "Donate to this wondeful project...");
+            this.bunifuToolTip1.SetToolTipIcon(this.pbDonate, null);
+            this.pbDonate.ToolTipText = "";
+            this.bunifuToolTip1.SetToolTipTitle(this.pbDonate, "");
+            this.pbDonate.WaitOnLoad = false;
+            this.pbDonate.Zoom = 22;
+            this.pbDonate.ZoomSpeed = 10;
+            this.pbDonate.Click += new System.EventHandler(this.pbDonate_Click);
             // 
             // pbSettings
             // 
@@ -557,6 +424,66 @@
             this.pbExit.ZoomSpeed = 10;
             this.pbExit.Click += new System.EventHandler(this.PbExit_Click);
             // 
+            // bdrSeparator1
+            // 
+            this.bdrSeparator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.bdrSeparator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bdrSeparator1.Enabled = false;
+            this.bdrSeparator1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bdrSeparator1.Location = new System.Drawing.Point(0, 45);
+            this.bdrSeparator1.Name = "bdrSeparator1";
+            this.bdrSeparator1.Size = new System.Drawing.Size(839, 1);
+            this.bdrSeparator1.TabIndex = 15;
+            this.bunifuToolTip1.SetToolTip(this.bdrSeparator1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bdrSeparator1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bdrSeparator1, "");
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitle.Location = new System.Drawing.Point(34, 14);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(64, 16);
+            this.lblTitle.TabIndex = 13;
+            this.lblTitle.Text = "Sharp64";
+            this.bunifuToolTip1.SetToolTip(this.lblTitle, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lblTitle, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lblTitle, "");
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Location = new System.Drawing.Point(4, 47);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtRaw);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.pnlImageViewer);
+            this.splitContainer1.Panel1.Controls.Add(this.hotkeyList1);
+            this.bunifuToolTip1.SetToolTip(this.splitContainer1.Panel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.splitContainer1.Panel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.splitContainer1.Panel1, "");
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.txtConversion);
+            this.splitContainer1.Panel2.Controls.Add(this.pgiLoader);
+            this.bunifuToolTip1.SetToolTip(this.splitContainer1.Panel2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.splitContainer1.Panel2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.splitContainer1.Panel2, "");
+            this.splitContainer1.Size = new System.Drawing.Size(832, 441);
+            this.splitContainer1.SplitterDistance = 417;
+            this.splitContainer1.TabIndex = 14;
+            this.bunifuToolTip1.SetToolTip(this.splitContainer1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.splitContainer1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.splitContainer1, "");
+            // 
             // txtRaw
             // 
             this.txtRaw.AcceptsReturn = false;
@@ -637,6 +564,40 @@
             this.txtRaw.TextChanged += new System.EventHandler(this.TxtRaw_TextChanged);
             this.txtRaw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnIputsKeyDown);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label1.Enabled = false;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(416, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1, 441);
+            this.label1.TabIndex = 16;
+            this.bunifuToolTip1.SetToolTip(this.label1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label1, "");
+            // 
+            // pnlImageViewer
+            // 
+            this.pnlImageViewer.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlImageViewer.Controls.Add(this.pbImageViewer);
+            this.pnlImageViewer.Controls.Add(this.pbChooseImage);
+            this.pnlImageViewer.Controls.Add(this.lblImageFilename);
+            this.pnlImageViewer.Controls.Add(this.pbCloseImageViewer);
+            this.pnlImageViewer.Location = new System.Drawing.Point(2, 5);
+            this.pnlImageViewer.Name = "pnlImageViewer";
+            this.pnlImageViewer.PanelColor = System.Drawing.Color.Empty;
+            this.pnlImageViewer.ShadowDept = 2;
+            this.pnlImageViewer.ShadowTopLeftVisible = true;
+            this.pnlImageViewer.Size = new System.Drawing.Size(407, 433);
+            this.pnlImageViewer.TabIndex = 3;
+            this.bunifuToolTip1.SetToolTip(this.pnlImageViewer, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pnlImageViewer, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pnlImageViewer, "");
+            this.pnlImageViewer.Visible = false;
+            this.pnlImageViewer.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.PnlImageViewer_PreviewKeyDown);
+            // 
             // pbImageViewer
             // 
             this.pbImageViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -688,6 +649,25 @@
             this.pbChooseImage.Zoom = 23;
             this.pbChooseImage.ZoomSpeed = 10;
             this.pbChooseImage.Click += new System.EventHandler(this.PbChooseImage_Click);
+            // 
+            // lblImageFilename
+            // 
+            this.lblImageFilename.AutoEllipsis = true;
+            this.lblImageFilename.AutoSize = false;
+            this.lblImageFilename.CursorType = null;
+            this.lblImageFilename.Font = new System.Drawing.Font("Cascadia Code", 9.75F);
+            this.lblImageFilename.ForeColor = System.Drawing.Color.White;
+            this.lblImageFilename.Location = new System.Drawing.Point(21, 20);
+            this.lblImageFilename.Name = "lblImageFilename";
+            this.lblImageFilename.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblImageFilename.Size = new System.Drawing.Size(293, 18);
+            this.lblImageFilename.TabIndex = 19;
+            this.lblImageFilename.Text = "...";
+            this.lblImageFilename.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblImageFilename.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuToolTip1.SetToolTip(this.lblImageFilename, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lblImageFilename, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lblImageFilename, "");
             // 
             // pbCloseImageViewer
             // 
@@ -805,41 +785,61 @@
             this.txtConversion.TextChanged += new System.EventHandler(this.TxtConversion_TextChanged);
             this.txtConversion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnIputsKeyDown);
             // 
-            // pbDonate
+            // pgiLoader
             // 
-            this.pbDonate.ActiveImage = null;
-            this.pbDonate.AllowAnimations = true;
-            this.pbDonate.AllowBuffering = false;
-            this.pbDonate.AllowZooming = false;
-            this.pbDonate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDonate.BackColor = System.Drawing.Color.Transparent;
-            this.pbDonate.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbDonate.ErrorImage")));
-            this.pbDonate.FadeWhenInactive = true;
-            this.pbDonate.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.pbDonate.Image = ((System.Drawing.Image)(resources.GetObject("pbDonate.Image")));
-            this.pbDonate.ImageActive = null;
-            this.pbDonate.ImageLocation = null;
-            this.pbDonate.ImageMargin = 22;
-            this.pbDonate.ImageSize = new System.Drawing.Size(18, 18);
-            this.pbDonate.ImageZoomSize = new System.Drawing.Size(40, 40);
-            this.pbDonate.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbDonate.InitialImage")));
-            this.pbDonate.Location = new System.Drawing.Point(648, 4);
-            this.pbDonate.Name = "pbDonate";
-            this.pbDonate.Rotation = 0;
-            this.pbDonate.ShowActiveImage = true;
-            this.pbDonate.ShowCursorChanges = true;
-            this.pbDonate.ShowImageBorders = true;
-            this.pbDonate.ShowSizeMarkers = false;
-            this.pbDonate.Size = new System.Drawing.Size(40, 40);
-            this.pbDonate.TabIndex = 23;
-            this.bunifuToolTip1.SetToolTip(this.pbDonate, "Donate to this wondeful project...");
-            this.bunifuToolTip1.SetToolTipIcon(this.pbDonate, null);
-            this.pbDonate.ToolTipText = "";
-            this.bunifuToolTip1.SetToolTipTitle(this.pbDonate, "");
-            this.pbDonate.WaitOnLoad = false;
-            this.pbDonate.Zoom = 22;
-            this.pbDonate.ZoomSpeed = 10;
-            this.pbDonate.Click += new System.EventHandler(this.pbDonate_Click);
+            this.pgiLoader.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pgiLoader.CircleColor = System.Drawing.Color.LightGray;
+            this.pgiLoader.Location = new System.Drawing.Point(189, 193);
+            this.pgiLoader.Name = "pgiLoader";
+            this.pgiLoader.Percentage = 0F;
+            this.pgiLoader.Size = new System.Drawing.Size(33, 33);
+            this.pgiLoader.TabIndex = 2;
+            this.pgiLoader.Text = "progressIndicator1";
+            this.bunifuToolTip1.SetToolTip(this.pgiLoader, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pgiLoader, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pgiLoader, "");
+            this.pgiLoader.Visible = false;
+            // 
+            // bunifuToolTip1
+            // 
+            this.bunifuToolTip1.Active = true;
+            this.bunifuToolTip1.AlignTextWithTitle = false;
+            this.bunifuToolTip1.AllowAutoClose = false;
+            this.bunifuToolTip1.AllowFading = true;
+            this.bunifuToolTip1.AutoCloseDuration = 5000;
+            this.bunifuToolTip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.bunifuToolTip1.ClickToShowDisplayControl = false;
+            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
+            this.bunifuToolTip1.DisplayControl = null;
+            this.bunifuToolTip1.EntryAnimationSpeed = 350;
+            this.bunifuToolTip1.ExitAnimationSpeed = 200;
+            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
+            this.bunifuToolTip1.IconMargin = 6;
+            this.bunifuToolTip1.InitialDelay = 0;
+            this.bunifuToolTip1.Name = "bunifuToolTip1";
+            this.bunifuToolTip1.Opacity = 1D;
+            this.bunifuToolTip1.OverrideToolTipTitles = false;
+            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
+            this.bunifuToolTip1.ReshowDelay = 100;
+            this.bunifuToolTip1.ShowAlways = true;
+            this.bunifuToolTip1.ShowBorders = false;
+            this.bunifuToolTip1.ShowIcons = true;
+            this.bunifuToolTip1.ShowShadows = true;
+            this.bunifuToolTip1.Tag = null;
+            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuToolTip1.TextMargin = 2;
+            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.White;
+            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.bunifuToolTip1.ToolTipTitle = null;
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Sharp64";
+            this.notifyIcon1.Click += new System.EventHandler(this.NotifyIcon_Click);
             // 
             // hotkeyList1
             // 
@@ -874,12 +874,12 @@
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.pnlTitleBar.ResumeLayout(false);
             this.pnlTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.pnlImageViewer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageViewer)).EndInit();
             this.ResumeLayout(false);
 
