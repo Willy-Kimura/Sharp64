@@ -384,7 +384,7 @@ namespace WK.Apps.Sharp64.Views
         {
             if (!_popup.Visible)
                 _popup = new HotkeyPopup();
-
+            
             _popup.Selection = selection;
 
             _popup.Show();
@@ -866,6 +866,11 @@ namespace WK.Apps.Sharp64.Views
         private void PbChooseImage_Click(object sender, EventArgs e)
         {
             EncodeFile(true);
+        }
+
+        private void pbDonate_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.buymeacoffee.com/willykimura");
         }
 
         private void NotifyIcon_Click(object sender, EventArgs e)

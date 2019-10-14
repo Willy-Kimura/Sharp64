@@ -33,12 +33,13 @@ namespace WK.Apps.Sharp64.Views
         /// <summary>
         /// Displays the window with animation.
         /// </summary>
+        /// <param name="owner">The parent form.</param>
         public new void Show()
         {
             Opacity = 0.0;
-
+            
             base.Show();
-
+            
             Transition.run(this, "Opacity", 1.0, new TransitionType_EaseInEaseOut(500));
         }
 

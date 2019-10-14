@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.pbAppIcon = new System.Windows.Forms.PictureBox();
             this.pbMinimize = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -41,7 +41,6 @@
             this.bdrSeparator1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
-            this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.label2 = new System.Windows.Forms.Label();
             this.chkTopmost = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,6 +56,7 @@
             this.chkEnableHotkeySelection = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -230,46 +230,6 @@
             this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
             this.bunifuToolTip1.ToolTipTitle = null;
             // 
-            // bunifuFormDock1
-            // 
-            this.bunifuFormDock1.AllowFormDragging = true;
-            this.bunifuFormDock1.AllowFormDropShadow = true;
-            this.bunifuFormDock1.AllowFormResizing = true;
-            this.bunifuFormDock1.AllowHidingBottomRegion = true;
-            this.bunifuFormDock1.AllowOpacityChangesWhileDragging = false;
-            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.BottomBorder.ShowBorder = true;
-            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.LeftBorder.ShowBorder = true;
-            this.bunifuFormDock1.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.RightBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.RightBorder.ShowBorder = true;
-            this.bunifuFormDock1.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.TopBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.TopBorder.ShowBorder = true;
-            this.bunifuFormDock1.ContainerControl = this;
-            this.bunifuFormDock1.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
-            this.bunifuFormDock1.DockingIndicatorsOpacity = 0.5D;
-            this.bunifuFormDock1.DockingOptions.DockAll = true;
-            this.bunifuFormDock1.DockingOptions.DockBottomLeft = true;
-            this.bunifuFormDock1.DockingOptions.DockBottomRight = true;
-            this.bunifuFormDock1.DockingOptions.DockFullScreen = true;
-            this.bunifuFormDock1.DockingOptions.DockLeft = true;
-            this.bunifuFormDock1.DockingOptions.DockRight = true;
-            this.bunifuFormDock1.DockingOptions.DockTopLeft = true;
-            this.bunifuFormDock1.DockingOptions.DockTopRight = true;
-            this.bunifuFormDock1.FormDraggingOpacity = 0.9D;
-            this.bunifuFormDock1.ParentForm = this;
-            this.bunifuFormDock1.ShowCursorChanges = true;
-            this.bunifuFormDock1.ShowDockingIndicators = true;
-            this.bunifuFormDock1.TitleBarOptions.AllowFormDragging = true;
-            this.bunifuFormDock1.TitleBarOptions.BunifuFormDock = this.bunifuFormDock1;
-            this.bunifuFormDock1.TitleBarOptions.DoubleClickToExpandWindow = true;
-            this.bunifuFormDock1.TitleBarOptions.TitleBarControl = this.pnlTitleBar;
-            this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
-            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
@@ -296,10 +256,10 @@
             this.chkTopmost.BackColor = System.Drawing.Color.Transparent;
             this.chkTopmost.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkTopmost.BackgroundImage")));
             this.chkTopmost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.chkTopmost.BindingControl = null;
+            this.chkTopmost.BindingControl = this.lblTopmost;
             this.chkTopmost.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.chkTopmost.Checked = true;
-            this.chkTopmost.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.chkTopmost.Checked = false;
+            this.chkTopmost.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.chkTopmost.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkTopmost.CustomCheckmarkImage = null;
             this.chkTopmost.Location = new System.Drawing.Point(28, 21);
@@ -327,7 +287,7 @@
             this.chkTopmost.OnHoverUnchecked.BorderRadius = 2;
             this.chkTopmost.OnHoverUnchecked.BorderThickness = 1;
             this.chkTopmost.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkTopmost.OnUncheck.BorderColor = System.Drawing.Color.MediumPurple;
+            this.chkTopmost.OnUncheck.BorderColor = System.Drawing.Color.BlueViolet;
             this.chkTopmost.OnUncheck.BorderRadius = 2;
             this.chkTopmost.OnUncheck.BorderThickness = 1;
             this.chkTopmost.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
@@ -362,7 +322,7 @@
             this.lblTopmost.CursorType = System.Windows.Forms.Cursors.Hand;
             this.lblTopmost.Font = new System.Drawing.Font("Product Sans Light", 12F);
             this.lblTopmost.ForeColor = System.Drawing.Color.White;
-            this.lblTopmost.Location = new System.Drawing.Point(58, 22);
+            this.lblTopmost.Location = new System.Drawing.Point(58, 21);
             this.lblTopmost.Name = "lblTopmost";
             this.lblTopmost.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTopmost.Size = new System.Drawing.Size(368, 22);
@@ -389,7 +349,7 @@
             this.pnlEnableHotkeySelection.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEnableHotkeySelection.Location = new System.Drawing.Point(0, 111);
             this.pnlEnableHotkeySelection.Name = "pnlEnableHotkeySelection";
-            this.pnlEnableHotkeySelection.Size = new System.Drawing.Size(487, 168);
+            this.pnlEnableHotkeySelection.Size = new System.Drawing.Size(487, 171);
             this.pnlEnableHotkeySelection.TabIndex = 17;
             this.bunifuToolTip1.SetToolTip(this.pnlEnableHotkeySelection, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnlEnableHotkeySelection, null);
@@ -398,7 +358,7 @@
             // pbShowPopupInfo
             // 
             this.pbShowPopupInfo.Image = ((System.Drawing.Image)(resources.GetObject("pbShowPopupInfo.Image")));
-            this.pbShowPopupInfo.Location = new System.Drawing.Point(268, 133);
+            this.pbShowPopupInfo.Location = new System.Drawing.Point(268, 136);
             this.pbShowPopupInfo.Name = "pbShowPopupInfo";
             this.pbShowPopupInfo.Size = new System.Drawing.Size(20, 17);
             this.pbShowPopupInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -417,7 +377,7 @@
             this.lblShowPopup.CursorType = System.Windows.Forms.Cursors.Hand;
             this.lblShowPopup.Font = new System.Drawing.Font("Product Sans Light", 12F);
             this.lblShowPopup.ForeColor = System.Drawing.Color.White;
-            this.lblShowPopup.Location = new System.Drawing.Point(175, 132);
+            this.lblShowPopup.Location = new System.Drawing.Point(175, 135);
             this.lblShowPopup.Name = "lblShowPopup";
             this.lblShowPopup.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblShowPopup.Size = new System.Drawing.Size(91, 22);
@@ -447,7 +407,7 @@
             this.chkShowPopup.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
             this.chkShowPopup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkShowPopup.CustomCheckmarkImage = null;
-            this.chkShowPopup.Location = new System.Drawing.Point(145, 132);
+            this.chkShowPopup.Location = new System.Drawing.Point(145, 135);
             this.chkShowPopup.MinimumSize = new System.Drawing.Size(17, 17);
             this.chkShowPopup.Name = "chkShowPopup";
             this.chkShowPopup.OnCheck.BorderColor = System.Drawing.Color.BlueViolet;
@@ -472,7 +432,7 @@
             this.chkShowPopup.OnHoverUnchecked.BorderRadius = 2;
             this.chkShowPopup.OnHoverUnchecked.BorderThickness = 1;
             this.chkShowPopup.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkShowPopup.OnUncheck.BorderColor = System.Drawing.Color.MediumPurple;
+            this.chkShowPopup.OnUncheck.BorderColor = System.Drawing.Color.BlueViolet;
             this.chkShowPopup.OnUncheck.BorderRadius = 2;
             this.chkShowPopup.OnUncheck.BorderThickness = 1;
             this.chkShowPopup.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
@@ -539,26 +499,26 @@
             this.txtHotkey.Modified = false;
             this.txtHotkey.Multiline = false;
             this.txtHotkey.Name = "txtHotkey";
-            stateProperties5.BorderColor = System.Drawing.Color.MediumPurple;
-            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties5.ForeColor = System.Drawing.Color.White;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtHotkey.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.Empty;
-            stateProperties6.FillColor = System.Drawing.Color.White;
-            stateProperties6.ForeColor = System.Drawing.Color.Empty;
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtHotkey.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.MediumPurple;
-            stateProperties7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties7.ForeColor = System.Drawing.Color.White;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtHotkey.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
-            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtHotkey.OnIdleState = stateProperties8;
+            stateProperties1.BorderColor = System.Drawing.Color.MediumPurple;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties1.ForeColor = System.Drawing.Color.White;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtHotkey.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.Empty;
+            stateProperties2.FillColor = System.Drawing.Color.White;
+            stateProperties2.ForeColor = System.Drawing.Color.Empty;
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtHotkey.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.MediumPurple;
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties3.ForeColor = System.Drawing.Color.White;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtHotkey.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtHotkey.OnIdleState = stateProperties4;
             this.txtHotkey.PasswordChar = '\0';
             this.txtHotkey.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtHotkey.PlaceholderText = "press your keys here...";
@@ -603,7 +563,7 @@
             this.lblEnableHotkeySelection.CursorType = System.Windows.Forms.Cursors.Hand;
             this.lblEnableHotkeySelection.Font = new System.Drawing.Font("Product Sans Light", 12F);
             this.lblEnableHotkeySelection.ForeColor = System.Drawing.Color.White;
-            this.lblEnableHotkeySelection.Location = new System.Drawing.Point(58, 22);
+            this.lblEnableHotkeySelection.Location = new System.Drawing.Point(58, 21);
             this.lblEnableHotkeySelection.Name = "lblEnableHotkeySelection";
             this.lblEnableHotkeySelection.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblEnableHotkeySelection.Size = new System.Drawing.Size(378, 22);
@@ -658,7 +618,7 @@
             this.chkEnableHotkeySelection.OnHoverUnchecked.BorderRadius = 2;
             this.chkEnableHotkeySelection.OnHoverUnchecked.BorderThickness = 1;
             this.chkEnableHotkeySelection.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkEnableHotkeySelection.OnUncheck.BorderColor = System.Drawing.Color.MediumPurple;
+            this.chkEnableHotkeySelection.OnUncheck.BorderColor = System.Drawing.Color.BlueViolet;
             this.chkEnableHotkeySelection.OnUncheck.BorderRadius = 2;
             this.chkEnableHotkeySelection.OnUncheck.BorderThickness = 1;
             this.chkEnableHotkeySelection.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
@@ -677,7 +637,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 167);
+            this.label1.Location = new System.Drawing.Point(0, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(487, 1);
             this.label1.TabIndex = 15;
@@ -705,12 +665,52 @@
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel2, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel2, "");
             // 
+            // bunifuFormDock1
+            // 
+            this.bunifuFormDock1.AllowFormDragging = true;
+            this.bunifuFormDock1.AllowFormDropShadow = true;
+            this.bunifuFormDock1.AllowFormResizing = true;
+            this.bunifuFormDock1.AllowHidingBottomRegion = true;
+            this.bunifuFormDock1.AllowOpacityChangesWhileDragging = false;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.RightBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.TopBorder.ShowBorder = true;
+            this.bunifuFormDock1.ContainerControl = this;
+            this.bunifuFormDock1.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
+            this.bunifuFormDock1.DockingIndicatorsOpacity = 0.5D;
+            this.bunifuFormDock1.DockingOptions.DockAll = true;
+            this.bunifuFormDock1.DockingOptions.DockBottomLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockBottomRight = true;
+            this.bunifuFormDock1.DockingOptions.DockFullScreen = true;
+            this.bunifuFormDock1.DockingOptions.DockLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockRight = true;
+            this.bunifuFormDock1.DockingOptions.DockTopLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockTopRight = true;
+            this.bunifuFormDock1.FormDraggingOpacity = 0.9D;
+            this.bunifuFormDock1.ParentForm = this;
+            this.bunifuFormDock1.ShowCursorChanges = true;
+            this.bunifuFormDock1.ShowDockingIndicators = true;
+            this.bunifuFormDock1.TitleBarOptions.AllowFormDragging = true;
+            this.bunifuFormDock1.TitleBarOptions.BunifuFormDock = this.bunifuFormDock1;
+            this.bunifuFormDock1.TitleBarOptions.DoubleClickToExpandWindow = true;
+            this.bunifuFormDock1.TitleBarOptions.TitleBarControl = this.pnlTitleBar;
+            this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(487, 280);
+            this.ClientSize = new System.Drawing.Size(487, 283);
             this.Controls.Add(this.pnlEnableHotkeySelection);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTitleBar);

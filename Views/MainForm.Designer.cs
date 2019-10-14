@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
@@ -41,6 +40,7 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.bdrSeparator1 = new System.Windows.Forms.Label();
@@ -64,6 +64,7 @@
             this.pbChooseImage = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pbCloseImageViewer = new Bunifu.UI.WinForms.BunifuImageButton();
             this.txtConversion = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.pbDonate = new Bunifu.UI.WinForms.BunifuImageButton();
             this.hotkeyList1 = new WK.Apps.Sharp64.Views.Controls.HotkeyList();
             this.pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -117,6 +118,7 @@
             // 
             // pnlTitleBar
             // 
+            this.pnlTitleBar.Controls.Add(this.pbDonate);
             this.pnlTitleBar.Controls.Add(this.pbSettings);
             this.pnlTitleBar.Controls.Add(this.btnSwapSides);
             this.pnlTitleBar.Controls.Add(this.bunifuButton1);
@@ -803,6 +805,42 @@
             this.txtConversion.TextChanged += new System.EventHandler(this.TxtConversion_TextChanged);
             this.txtConversion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnIputsKeyDown);
             // 
+            // pbDonate
+            // 
+            this.pbDonate.ActiveImage = null;
+            this.pbDonate.AllowAnimations = true;
+            this.pbDonate.AllowBuffering = false;
+            this.pbDonate.AllowZooming = false;
+            this.pbDonate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDonate.BackColor = System.Drawing.Color.Transparent;
+            this.pbDonate.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbDonate.ErrorImage")));
+            this.pbDonate.FadeWhenInactive = true;
+            this.pbDonate.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.pbDonate.Image = ((System.Drawing.Image)(resources.GetObject("pbDonate.Image")));
+            this.pbDonate.ImageActive = null;
+            this.pbDonate.ImageLocation = null;
+            this.pbDonate.ImageMargin = 22;
+            this.pbDonate.ImageSize = new System.Drawing.Size(18, 18);
+            this.pbDonate.ImageZoomSize = new System.Drawing.Size(40, 40);
+            this.pbDonate.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbDonate.InitialImage")));
+            this.pbDonate.Location = new System.Drawing.Point(648, 4);
+            this.pbDonate.Name = "pbDonate";
+            this.pbDonate.Rotation = 0;
+            this.pbDonate.ShowActiveImage = true;
+            this.pbDonate.ShowCursorChanges = true;
+            this.pbDonate.ShowImageBorders = true;
+            this.pbDonate.ShowSizeMarkers = false;
+            this.pbDonate.Size = new System.Drawing.Size(40, 40);
+            this.pbDonate.TabIndex = 23;
+            this.bunifuToolTip1.SetToolTip(this.pbDonate, "Donate to this wondeful project...");
+            this.bunifuToolTip1.SetToolTipIcon(this.pbDonate, null);
+            this.pbDonate.ToolTipText = "";
+            this.bunifuToolTip1.SetToolTipTitle(this.pbDonate, "");
+            this.pbDonate.WaitOnLoad = false;
+            this.pbDonate.Zoom = 22;
+            this.pbDonate.ZoomSpeed = 10;
+            this.pbDonate.Click += new System.EventHandler(this.pbDonate_Click);
+            // 
             // hotkeyList1
             // 
             this.hotkeyList1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -872,6 +910,7 @@
         public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtRaw;
         public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtConversion;
         private Controls.HotkeyList hotkeyList1;
+        private Bunifu.UI.WinForms.BunifuImageButton pbDonate;
     }
 }
 

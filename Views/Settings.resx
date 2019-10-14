@@ -1033,9 +1033,17 @@
         RK5CYII=
 </value>
   </data>
-  <metadata name="bunifuFormDock1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>151, 17</value>
-  </metadata>
+  <data name="chkTopmost.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABlSURBVDhPY6AZ6NZ+7NCl/eg+EP+nEN/v0nrkATa0U/vR
+        8x6d+xpgDgWgXf2+AtDg72AOyBYwgwoAbtaooaOGUgeMGjpqKDKDCoDmhn6vl7/PAeZQCOCGdmg/LABx
+        qIE7tR82AADOBMaJzbdmtwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="lblTopmost.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Product Sans Light'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: White; text-align: left; }</value>
+  </data>
   <data name="pbShowPopupInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAA9FJREFUaEPt
@@ -1131,6 +1139,9 @@ hotkey you're able to remember easily or are comfortable with.</value>
   <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Product Sans Light'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: #797D97; text-align: left; }</value>
   </data>
+  <metadata name="bunifuFormDock1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>151, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIACtBwAAZgAAAICAAAABACAAKAgBABMIAABAQAAAAQAgAChCAAA7EAEAMDAAAAEA
@@ -2829,17 +2840,5 @@ hotkey you're able to remember easily or are comfortable with.</value>
         AAAAAAAAAAAAAAAAAAAA//8AAP//AACAAwAAgAMAAIADAACAAwAAgAMAAIADAACAAwAAgAMAAIADAACA
         AwAAgAMAAIADAADAAwAA//8AAA==
 </value>
-  </data>
-  <data name="chkTopmost.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVDhPY6ApqJe/z9Gp+TCjU/thAzm4Q/thQZfWfQmo
-        cQwM/fr3BTq1Hr3v0n70n0L8HWiwAdhQkAuxKCARP4bQWg8rIIYCnY+piDwMMmvU0FFDRw3FpoAcPGoo
-        qqHdsOKLDAzTCzcUVLCiKyIXd2o+CgAbCgJdWo88QLZQgju0H0UwMDAwAACzNdj2/rvi1AAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
-  <data name="lblTopmost.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Product Sans Light'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: White; text-align: left; }</value>
   </data>
 </root>

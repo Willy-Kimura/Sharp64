@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Sharp64 - A Base64 Encoder/Decoder")]
-[assembly: AssemblyDescription("A .NET utility that provides Base64 encoding/decoding features for files and images.")]
+[assembly: AssemblyDescription("A .NET utility that provides Base64 encoding/decoding for texts, files, and images.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Willy Kimura")]
 [assembly: AssemblyProduct("Sharp64")]
