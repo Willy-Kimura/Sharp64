@@ -7,10 +7,7 @@
     {
         #region Constructor
 
-        public AppSettings()
-        {
-
-        }
+        public AppSettings() { }
 
         #endregion
 
@@ -18,8 +15,8 @@
 
         public bool TopMost { get; set; } = false;
         public bool ShowPopup { get; set; } = true;
-        public bool AllowHotkeySelections { get; set; } = true;
-        public string SelectionHotkey { get; set; } = string.Empty;
+        public bool AllowHotkeySelections { get; set; } = false;
+        public string SelectionHotkey { get; set; } = "Control + F7";
 
         #endregion
     }
