@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 using Transitions;
-using Bunifu.UI.WinForms;
+using WK.Apps.Sharp64.Helpers;
 
 namespace WK.Apps.Sharp64.Views
 {
@@ -19,6 +19,11 @@ namespace WK.Apps.Sharp64.Views
         #endregion
 
         #region Fields
+
+        /// <summary>
+        /// Gets or sets the globally selected text.
+        /// </summary>
+        public string Selection { get; set; }
         
         #endregion
 
@@ -68,30 +73,71 @@ namespace WK.Apps.Sharp64.Views
 
                 transition.TransitionCompletedEvent += delegate
                 {
-                    base.Close();
+                    base.Hide();
                 };
             }
             catch (Exception) { }
         }
-        
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the 
+        /// default conversion is from Base64 to plain text.
+        /// </summary>
+        public bool DefaultConversion { get; set; } = true;
+
         #endregion
+
+        public async void EncodeDecode()
+        {
+            txtConversion.Text = string.Empty;
+
+            if (EncoderDecoder.IsBase64Formatted(Selection))
+            {
+                DefaultConversion = true;
+                txtConversion.Text = await EncoderDecoder.Base64DecodeAsync(Selection);
+            }
+            else
+            {
+                DefaultConversion = false;
+                txtConversion.Text = await EncoderDecoder.Base64EncodeAsync(Selection);
+            }
+        }
+
+        public async void SwapSides()
+        {
+            if (EncoderDecoder.IsBase64Formatted(txtConversion.Text))
+            {
+                DefaultConversion = true;
+                txtConversion.Text = await EncoderDecoder.Base64DecodeAsync(txtConversion.Text);
+            }
+            else
+            {
+                DefaultConversion = false;
+                txtConversion.Text = await EncoderDecoder.Base64EncodeAsync(txtConversion.Text);
+            }
+        }
 
         #endregion
 
         #region Events
 
-        private void Settings_Load(object sender, EventArgs e)
+        private void Popup_Load(object sender, EventArgs e)
         {
             bunifuFormDock1.SubscribeControlsToDragEvents(
                 new Control[] { lblTitle, pbAppIcon }, true);
         }
 
-        private void Settings_Shown(object sender, EventArgs e)
+        private void Popup_Shown(object sender, EventArgs e)
         {
             Activate();
         }
 
-        private void Settings_Deactivate(object sender, EventArgs e)
+        private void btnSwapSides_Click(object sender, EventArgs e)
+        {
+            SwapSides();
+        }
+
+        private void Popup_Deactivate(object sender, EventArgs e)
         {
             
         }
@@ -105,7 +151,7 @@ namespace WK.Apps.Sharp64.Views
         {
             Hide();
         }
-        
+
         #endregion
     }
 }

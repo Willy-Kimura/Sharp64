@@ -88,11 +88,7 @@ namespace WK.Apps.Sharp64.Views
         {
             bunifuFormDock1.SubscribeControlsToDragEvents(
                 new Control[] { lblTitle, pbAppIcon }, true);
-
-            // Suspend hotkeys to prevent invoking 
-            // feature when changing hotkeys.
-            MainForm.HotkeyListener.SuspendHotkeys();
-
+            
             HotkeySelector.Enable(txtHotkey.Input);
             txtHotkey.Text = MainForm.ApplicationSettings.SelectionHotkey;
 
@@ -106,6 +102,10 @@ namespace WK.Apps.Sharp64.Views
         private void Settings_Shown(object sender, EventArgs e)
         {
             Activate();
+
+            // Remove hotkeys to prevent invoking 
+            // feature when changing hotkeys.
+            MainForm.HotkeyListener.RemoveAllHotkeys();
         }
 
         private void Settings_Deactivate(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace WK.Apps.Sharp64.Views
             MainForm.ApplySettings();
 
             // Resume using the applied hotkeys when closed.
-            MainForm.HotkeyListener.ResumeHotkeys();
+            MainForm.HotkeyListener.AddHotkey(MainForm.ApplicationSettings.SelectionHotkey);
 
             Hide();
         }

@@ -64,6 +64,7 @@
             this.pbChooseImage = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pbCloseImageViewer = new Bunifu.UI.WinForms.BunifuImageButton();
             this.txtConversion = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.hotkeyList1 = new WK.Apps.Sharp64.Views.Controls.HotkeyList();
             this.pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -172,6 +173,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.hotkeyList1);
             this.splitContainer1.Panel1.Controls.Add(this.txtRaw);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.pnlImageViewer);
@@ -329,7 +331,7 @@
             this.pbSettings.ShowSizeMarkers = false;
             this.pbSettings.Size = new System.Drawing.Size(40, 40);
             this.pbSettings.TabIndex = 22;
-            this.bunifuToolTip1.SetToolTip(this.pbSettings, "Minimize");
+            this.bunifuToolTip1.SetToolTip(this.pbSettings, "View settings");
             this.bunifuToolTip1.SetToolTipIcon(this.pbSettings, null);
             this.pbSettings.ToolTipText = "";
             this.bunifuToolTip1.SetToolTipTitle(this.pbSettings, "");
@@ -610,7 +612,7 @@
             this.txtRaw.OnIdleState = stateProperties6;
             this.txtRaw.PasswordChar = '\0';
             this.txtRaw.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.txtRaw.PlaceholderText = "Begin typing or hit \'Ctrl + O\' to choose a file/image you\'d like to convert...";
+            this.txtRaw.PlaceholderText = "Begin typing...";
             this.txtRaw.ReadOnly = false;
             this.txtRaw.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtRaw.SelectedText = "";
@@ -624,7 +626,7 @@
             this.txtRaw.TextMarginBottom = 0;
             this.txtRaw.TextMarginLeft = 10;
             this.txtRaw.TextMarginTop = 10;
-            this.txtRaw.TextPlaceholder = "Begin typing or hit \'Ctrl + O\' to choose a file/image you\'d like to convert...";
+            this.txtRaw.TextPlaceholder = "Begin typing...";
             this.bunifuToolTip1.SetToolTip(this.txtRaw, "");
             this.bunifuToolTip1.SetToolTipIcon(this.txtRaw, null);
             this.bunifuToolTip1.SetToolTipTitle(this.txtRaw, "");
@@ -801,6 +803,20 @@
             this.txtConversion.TextChanged += new System.EventHandler(this.TxtConversion_TextChanged);
             this.txtConversion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnIputsKeyDown);
             // 
+            // hotkeyList1
+            // 
+            this.hotkeyList1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.hotkeyList1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.hotkeyList1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.hotkeyList1.ForeColor = System.Drawing.Color.White;
+            this.hotkeyList1.Location = new System.Drawing.Point(3, 116);
+            this.hotkeyList1.Name = "hotkeyList1";
+            this.hotkeyList1.Size = new System.Drawing.Size(406, 209);
+            this.hotkeyList1.TabIndex = 17;
+            this.bunifuToolTip1.SetToolTip(this.hotkeyList1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.hotkeyList1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.hotkeyList1, "");
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -840,8 +856,6 @@
         private System.Windows.Forms.Label bdrSeparator1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtRaw;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtConversion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbAppIcon;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
@@ -855,6 +869,9 @@
         private Bunifu.UI.WinForms.BunifuLabel lblImageFilename;
         private Bunifu.UI.WinForms.BunifuImageButton pbChooseImage;
         private Bunifu.UI.WinForms.BunifuImageButton pbSettings;
+        public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtRaw;
+        public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtConversion;
+        private Controls.HotkeyList hotkeyList1;
     }
 }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Collections.Generic;
@@ -42,6 +43,7 @@ namespace WK.Apps.Sharp64.Views
 
         private static MainForm _instance;
         private Settings _settings = new Settings();
+        private static HotkeyPopup _popup = new HotkeyPopup();
         public static HotkeyListener HotkeyListener = new HotkeyListener();
 
         #endregion
@@ -105,7 +107,7 @@ namespace WK.Apps.Sharp64.Views
 
             base.Show();
 
-            Transition.run(this, "Opacity", 1.0, new TransitionType_EaseInEaseOut(500));
+            Transition.run(this, "Opacity", 1.0, new TransitionType_EaseInEaseOut(600));
         }
 
         /// <summary>
@@ -176,14 +178,7 @@ namespace WK.Apps.Sharp64.Views
         /// </summary>
         public void Minimize()
         {
-            // This will provide the default animation
-            // whenever the form is minimized.
-            FormBorderStyle = FormBorderStyle.Sizable;
-
             bunifuFormDock1.WindowState = BunifuFormDock.FormWindowStates.Minimized;
-
-            // Let's restore the window's style back to no-border.
-            FormBorderStyle = FormBorderStyle.None;
         }
 
         /// <summary>
@@ -379,9 +374,28 @@ namespace WK.Apps.Sharp64.Views
         }
 
         /// <summary>
+        /// Displays the Hotkey popup window and assigns 
+        /// the text that underwent Base64 conversion.
+        /// </summary>
+        /// <param name="selection">
+        /// The text that was globally selected.
+        /// </param>
+        public void ShowPopup(string selection)
+        {
+            if (!_popup.Visible)
+                _popup = new HotkeyPopup();
+
+            _popup.Selection = selection;
+
+            _popup.Show();
+            _popup.Activate();
+            _popup.EncodeDecode();
+        }
+
+        /// <summary>
         /// Shows the settings window.
         /// </summary>
-        private void ShowSettings()
+        public void ShowSettings()
         {
             _settings.Show();
         }
@@ -649,39 +663,52 @@ namespace WK.Apps.Sharp64.Views
         /// <summary>
         /// Encodes the selected text from any application.
         /// </summary>
-        public void EncodeDecodeSelection()
+        public void EncodeDecodeGlobalSelection()
         {
-            if (!TopMost)
-                TopMost = true;
-
-            string clipboardText = Clipboard.GetText();
-            SendKeys.SendWait("^c");
-
-            string selection = Clipboard.GetText();
-            Clipboard.SetText(clipboardText);
-            
-            Restore();
-
-            if (DefaultConversion)
+            try
             {
-                if (EncoderDecoder.IsBase64Formatted(selection))
+                string clipboardText = Clipboard.GetText();
+                SendKeys.SendWait("^c");
+
+                Thread.Sleep(200);
+
+                string selection = Clipboard.GetText();
+                Clipboard.SetText(clipboardText);
+
+                if (ApplicationSettings.ShowPopup)
                 {
-                    txtConversion.Input.Focus();
-                    txtConversion.Text = selection;
+                    ShowPopup(selection);
                 }
                 else
                 {
-                    txtRaw.Input.Focus();
-                    txtRaw.Text = selection;
+                    if (!TopMost)
+                        TopMost = true;
+
+                    Restore();
+
+                    if (DefaultConversion)
+                    {
+                        if (EncoderDecoder.IsBase64Formatted(selection))
+                        {
+                            txtConversion.Input.Focus();
+                            txtConversion.Text = selection;
+                        }
+                        else
+                        {
+                            txtRaw.Input.Focus();
+                            txtRaw.Text = selection;
+                        }
+                    }
+                    else
+                    {
+                        txtConversion.Input.Focus();
+                        txtConversion.Text = selection;
+                    }
+
+                    TopMost = ApplicationSettings.TopMost;
                 }
             }
-            else
-            {
-                txtConversion.Input.Focus();
-                txtConversion.Text = selection;
-            }
-
-            TopMost = ApplicationSettings.TopMost;
+            catch (Exception) { }
         }
 
         #endregion
@@ -709,10 +736,22 @@ namespace WK.Apps.Sharp64.Views
 
         private async void TxtRaw_TextChanged(object sender, EventArgs e)
         {
-            if (DefaultConversion && txtRaw.Focused)
-                txtConversion.Text = await EncoderDecoder.Base64EncodeAsync(txtRaw.Text);
+            if (string.IsNullOrWhiteSpace(txtRaw.Text))
+            {
+                hotkeyList1.Show();
+                hotkeyList1.BringToFront();
+
+                txtConversion.Text = string.Empty;
+            }
             else
-                txtRaw.Text = await EncoderDecoder.Base64DecodeAsync(txtConversion.Text);
+            {
+                hotkeyList1.Hide();
+
+                if (DefaultConversion && txtRaw.Focused)
+                    txtConversion.Text = await EncoderDecoder.Base64EncodeAsync(txtRaw.Text);
+                else
+                    txtRaw.Text = await EncoderDecoder.Base64DecodeAsync(txtConversion.Text);
+            }
         }
 
         private async void TxtConversion_TextChanged(object sender, EventArgs e)
@@ -780,7 +819,7 @@ namespace WK.Apps.Sharp64.Views
                 if (ApplicationSettings.AllowHotkeySelections &&
                     !string.IsNullOrWhiteSpace(ApplicationSettings.SelectionHotkey))
                 {
-                    EncodeDecodeSelection();
+                    EncodeDecodeGlobalSelection();
                 }
             }
         }
@@ -801,7 +840,6 @@ namespace WK.Apps.Sharp64.Views
 
         private void PbSettings_Click(object sender, EventArgs e)
         {
-            new HotkeyPopup().Show();
             ShowSettings();
         }
 

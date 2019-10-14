@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HotkeyPopup));
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.btnSwapSides = new Bunifu.UI.WinForms.BunifuUserControl();
             this.pbAppIcon = new System.Windows.Forms.PictureBox();
             this.pbClose = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bdrSeparator1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
-            this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtConversion = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.btnSwapSides = new Bunifu.UI.WinForms.BunifuUserControl();
+            this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -64,6 +64,34 @@
             this.bunifuToolTip1.SetToolTip(this.pnlTitleBar, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnlTitleBar, null);
             this.bunifuToolTip1.SetToolTipTitle(this.pnlTitleBar, "");
+            // 
+            // btnSwapSides
+            // 
+            this.btnSwapSides.AllowAnimations = true;
+            this.btnSwapSides.AllowBorderColorChanges = true;
+            this.btnSwapSides.AllowMouseEffects = true;
+            this.btnSwapSides.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSwapSides.AnimationSpeed = 200;
+            this.btnSwapSides.BackColor = System.Drawing.Color.Transparent;
+            this.btnSwapSides.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(88)))));
+            this.btnSwapSides.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(88)))));
+            this.btnSwapSides.BorderRadius = 2;
+            this.btnSwapSides.BorderThickness = 1;
+            this.btnSwapSides.ColorContrastOnClick = 60;
+            this.btnSwapSides.ColorContrastOnHover = 10;
+            this.btnSwapSides.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSwapSides.Image = ((System.Drawing.Image)(resources.GetObject("btnSwapSides.Image")));
+            this.btnSwapSides.ImageMargin = new System.Windows.Forms.Padding(3, 2, 6, -4);
+            this.btnSwapSides.Location = new System.Drawing.Point(225, 6);
+            this.btnSwapSides.Name = "btnSwapSides";
+            this.btnSwapSides.ShowBorders = true;
+            this.btnSwapSides.Size = new System.Drawing.Size(36, 35);
+            this.btnSwapSides.Style = Bunifu.UI.WinForms.BunifuUserControl.UserControlStyles.Round;
+            this.btnSwapSides.TabIndex = 22;
+            this.bunifuToolTip1.SetToolTip(this.btnSwapSides, "Swap from encoding to decoding or vice-versa");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnSwapSides, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnSwapSides, "");
+            this.btnSwapSides.Click += new System.EventHandler(this.btnSwapSides_Click);
             // 
             // pbAppIcon
             // 
@@ -177,6 +205,100 @@
             this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
             this.bunifuToolTip1.ToolTipTitle = null;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.txtConversion);
+            this.panel1.Location = new System.Drawing.Point(4, 50);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(479, 371);
+            this.panel1.TabIndex = 15;
+            this.bunifuToolTip1.SetToolTip(this.panel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panel1, "");
+            // 
+            // txtConversion
+            // 
+            this.txtConversion.AcceptsReturn = false;
+            this.txtConversion.AcceptsTab = false;
+            this.txtConversion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConversion.AnimationSpeed = 200;
+            this.txtConversion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtConversion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtConversion.BackColor = System.Drawing.Color.Transparent;
+            this.txtConversion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtConversion.BackgroundImage")));
+            this.txtConversion.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.txtConversion.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtConversion.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.txtConversion.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.txtConversion.BorderRadius = 1;
+            this.txtConversion.BorderThickness = 1;
+            this.txtConversion.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtConversion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConversion.DefaultFont = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConversion.DefaultText = "";
+            this.txtConversion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.txtConversion.ForeColor = System.Drawing.Color.White;
+            this.txtConversion.HideSelection = true;
+            this.txtConversion.IconLeft = null;
+            this.txtConversion.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConversion.IconPadding = 10;
+            this.txtConversion.IconRight = null;
+            this.txtConversion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConversion.Lines = new string[0];
+            this.txtConversion.Location = new System.Drawing.Point(0, 0);
+            this.txtConversion.MaxLength = 32767;
+            this.txtConversion.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtConversion.Modified = false;
+            this.txtConversion.Multiline = true;
+            this.txtConversion.Name = "txtConversion";
+            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties9.ForeColor = System.Drawing.Color.White;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtConversion.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.Empty;
+            stateProperties10.FillColor = System.Drawing.Color.White;
+            stateProperties10.ForeColor = System.Drawing.Color.Empty;
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtConversion.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties11.ForeColor = System.Drawing.Color.White;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtConversion.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties12.ForeColor = System.Drawing.Color.White;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.txtConversion.OnIdleState = stateProperties12;
+            this.txtConversion.PasswordChar = '\0';
+            this.txtConversion.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.txtConversion.PlaceholderText = "Base64 conversions show here...";
+            this.txtConversion.ReadOnly = false;
+            this.txtConversion.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtConversion.SelectedText = "";
+            this.txtConversion.SelectionLength = 0;
+            this.txtConversion.SelectionStart = 0;
+            this.txtConversion.ShortcutsEnabled = true;
+            this.txtConversion.Size = new System.Drawing.Size(479, 371);
+            this.txtConversion.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtConversion.TabIndex = 2;
+            this.txtConversion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtConversion.TextMarginBottom = 0;
+            this.txtConversion.TextMarginLeft = 10;
+            this.txtConversion.TextMarginTop = 10;
+            this.txtConversion.TextPlaceholder = "Base64 conversions show here...";
+            this.bunifuToolTip1.SetToolTip(this.txtConversion, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.txtConversion, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txtConversion, "");
+            this.txtConversion.UseSystemPasswordChar = false;
+            this.txtConversion.WordWrap = true;
+            // 
             // bunifuFormDock1
             // 
             this.bunifuFormDock1.AllowFormDragging = true;
@@ -217,125 +339,6 @@
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = this.pnlTitleBar;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.txtConversion);
-            this.panel1.Location = new System.Drawing.Point(4, 50);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(479, 371);
-            this.panel1.TabIndex = 15;
-            this.bunifuToolTip1.SetToolTip(this.panel1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.panel1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.panel1, "");
-            // 
-            // txtConversion
-            // 
-            this.txtConversion.AcceptsReturn = false;
-            this.txtConversion.AcceptsTab = false;
-            this.txtConversion.AnimationSpeed = 200;
-            this.txtConversion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtConversion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtConversion.BackColor = System.Drawing.Color.Transparent;
-            this.txtConversion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtConversion.BackgroundImage")));
-            this.txtConversion.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.txtConversion.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtConversion.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.txtConversion.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.txtConversion.BorderRadius = 1;
-            this.txtConversion.BorderThickness = 1;
-            this.txtConversion.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtConversion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConversion.DefaultFont = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConversion.DefaultText = "";
-            this.txtConversion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtConversion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.txtConversion.ForeColor = System.Drawing.Color.White;
-            this.txtConversion.HideSelection = true;
-            this.txtConversion.IconLeft = null;
-            this.txtConversion.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConversion.IconPadding = 10;
-            this.txtConversion.IconRight = null;
-            this.txtConversion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConversion.Lines = new string[0];
-            this.txtConversion.Location = new System.Drawing.Point(0, 0);
-            this.txtConversion.MaxLength = 32767;
-            this.txtConversion.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtConversion.Modified = false;
-            this.txtConversion.Multiline = true;
-            this.txtConversion.Name = "txtConversion";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties1.ForeColor = System.Drawing.Color.White;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtConversion.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.Empty;
-            stateProperties2.FillColor = System.Drawing.Color.White;
-            stateProperties2.ForeColor = System.Drawing.Color.Empty;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtConversion.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties3.ForeColor = System.Drawing.Color.White;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtConversion.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties4.ForeColor = System.Drawing.Color.White;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.txtConversion.OnIdleState = stateProperties4;
-            this.txtConversion.PasswordChar = '\0';
-            this.txtConversion.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.txtConversion.PlaceholderText = "Base64 conversions show here...";
-            this.txtConversion.ReadOnly = false;
-            this.txtConversion.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtConversion.SelectedText = "";
-            this.txtConversion.SelectionLength = 0;
-            this.txtConversion.SelectionStart = 0;
-            this.txtConversion.ShortcutsEnabled = true;
-            this.txtConversion.Size = new System.Drawing.Size(479, 371);
-            this.txtConversion.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtConversion.TabIndex = 2;
-            this.txtConversion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtConversion.TextMarginBottom = 0;
-            this.txtConversion.TextMarginLeft = 10;
-            this.txtConversion.TextMarginTop = 10;
-            this.txtConversion.TextPlaceholder = "Base64 conversions show here...";
-            this.bunifuToolTip1.SetToolTip(this.txtConversion, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.txtConversion, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.txtConversion, "");
-            this.txtConversion.UseSystemPasswordChar = false;
-            this.txtConversion.WordWrap = true;
-            // 
-            // btnSwapSides
-            // 
-            this.btnSwapSides.AllowAnimations = true;
-            this.btnSwapSides.AllowBorderColorChanges = true;
-            this.btnSwapSides.AllowMouseEffects = true;
-            this.btnSwapSides.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSwapSides.AnimationSpeed = 200;
-            this.btnSwapSides.BackColor = System.Drawing.Color.Transparent;
-            this.btnSwapSides.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(88)))));
-            this.btnSwapSides.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(88)))));
-            this.btnSwapSides.BorderRadius = 2;
-            this.btnSwapSides.BorderThickness = 1;
-            this.btnSwapSides.ColorContrastOnClick = 60;
-            this.btnSwapSides.ColorContrastOnHover = 10;
-            this.btnSwapSides.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSwapSides.Image = ((System.Drawing.Image)(resources.GetObject("btnSwapSides.Image")));
-            this.btnSwapSides.ImageMargin = new System.Windows.Forms.Padding(3, 2, 6, -4);
-            this.btnSwapSides.Location = new System.Drawing.Point(225, 6);
-            this.btnSwapSides.Name = "btnSwapSides";
-            this.btnSwapSides.ShowBorders = true;
-            this.btnSwapSides.Size = new System.Drawing.Size(36, 35);
-            this.btnSwapSides.Style = Bunifu.UI.WinForms.BunifuUserControl.UserControlStyles.Round;
-            this.btnSwapSides.TabIndex = 22;
-            this.bunifuToolTip1.SetToolTip(this.btnSwapSides, "Swap from encoding to decoding or vice-versa");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnSwapSides, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnSwapSides, "");
-            // 
             // HotkeyPopup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,11 +353,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HotkeyPopup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sharp64 Settings";
-            this.TopMost = true;
-            this.Deactivate += new System.EventHandler(this.Settings_Deactivate);
-            this.Load += new System.EventHandler(this.Settings_Load);
-            this.Shown += new System.EventHandler(this.Settings_Shown);
+            this.Text = "Sharp64 Conversions";
+            this.Deactivate += new System.EventHandler(this.Popup_Deactivate);
+            this.Load += new System.EventHandler(this.Popup_Load);
+            this.Shown += new System.EventHandler(this.Popup_Shown);
             this.pnlTitleBar.ResumeLayout(false);
             this.pnlTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).EndInit();
@@ -373,7 +375,7 @@
         private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtConversion;
         private Bunifu.UI.WinForms.BunifuUserControl btnSwapSides;
+        public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtConversion;
     }
 }

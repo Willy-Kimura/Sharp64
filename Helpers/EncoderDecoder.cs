@@ -45,10 +45,21 @@ namespace WK.Apps.Sharp64.Helpers
         public static bool IsBase64Formatted(string content)
         {
             content = content.Trim();
+            
+            if (content.EndsWith("="))
+            {
+                int modulus = content.Length % 4;
 
-            return (content.Length % 4 == 0) &&
+                if (modulus != 0)
+                    return false;
+
+                return true;
+            }
+            else
+            {
+                return (content.Length % 4 == 0) &&
                    Regex.IsMatch(content, @"^[a-zA-Z0-9\+/]*={0,3}$", RegexOptions.None);
-
+            }
         }
 
         /// <summary>
