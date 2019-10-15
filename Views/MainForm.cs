@@ -21,6 +21,8 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 
 using Transitions;
+using Newtonsoft.Json;
+using AutoUpdaterDotNET;
 using Bunifu.UI.WinForms;
 
 using WK.Apps.Sharp64.Helpers;
@@ -54,10 +56,11 @@ namespace WK.Apps.Sharp64.Views
         // using the CreateParams override.
         private const int CS_DBLCLKS = 0x8;
         private const int WS_MINIMIZEBOX = 0x20000;
-
+    
         private static MainForm _instance;
         private Settings _settings = new Settings();
         private static HotkeyPopup _popup = new HotkeyPopup();
+        private BunifuSnackbar Snackbar = new BunifuSnackbar();
         public static HotkeyListener HotkeyListener = new HotkeyListener();
 
         #endregion
@@ -340,6 +343,26 @@ namespace WK.Apps.Sharp64.Views
         #endregion
 
         #region Features Management
+
+        /// <summary>
+        /// Initializes the updater to be used 
+        /// when checking for updates online.
+        /// </summary>
+        public void SetupUpdater()
+        {
+            AutoUpdater.RunUpdateAsAdmin = false;
+            AutoUpdater.ShowRemindLaterButton = false;
+            AutoUpdater.CheckForUpdateEvent += OnCheckForUpdates;
+            AutoUpdater.ParseUpdateInfoEvent += OnParseUpdateInfo;
+        }
+
+        /// <summary>
+        /// Checks for any available updates.
+        /// </summary>
+        public void CheckForUpdates()
+        {
+            AutoUpdater.Start("https://www.dropbox.com/s/kxdc4t8nqg5n0p3/Update.json?dl=1");
+        }
         
         /// <summary>
         /// Displays the image viewer panel.
@@ -506,7 +529,7 @@ namespace WK.Apps.Sharp64.Views
         /// <param name="allowImagesOnly">
         /// Allow only supported images to be selected?
         /// </param>
-        public void ChooseFile(bool allowImagesOnly = false)
+        public void OpenFile(bool allowImagesOnly = false)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
 
@@ -737,6 +760,46 @@ namespace WK.Apps.Sharp64.Views
             catch (Exception) { }
         }
 
+        /// <summary>
+        /// Displays a snackbar notification.
+        /// </summary>
+        /// <param name="message">The message to be displayed.</param>
+        /// <param name="action">The snackbar's action message. (optional)</param>
+        /// <param name="position">The snackbar's position area.</param>
+        /// <param name="host">The snackbar's host or owner.</param>
+        /// <param name="duration">How long should the snackbar stay.</param>
+        /// <param name="margin">The distance betweeen the snackbar and its host.</param>
+        /// <param name="showClosingIcon">Show the snackbar's closing icon?</param>
+        /// <returns></returns>
+        public BunifuSnackbar.SnackbarResult Notify(string message, string action = "",
+            BunifuSnackbar.Positions position = BunifuSnackbar.Positions.BottomCenter,
+            BunifuSnackbar.Hosts host = BunifuSnackbar.Hosts.FormOwner, int duration = 3000,
+            int margin = 0, bool showClosingIcon = false)
+        {
+            Snackbar.ShowBorders = true;
+            Snackbar.ShowShadows = false;
+            Snackbar.FadeClosingIcon = true;
+            Snackbar.ZoomClosingIcon = false;
+            Snackbar.ShowSnackbarIcon = false;
+            Snackbar.ShowClosingIcon = showClosingIcon;
+
+            Snackbar.Margin = margin;
+            Snackbar.MessageRightMargin = 0;
+
+            Snackbar.InformationOptions.MessageForeColor = Color.Black;
+            Snackbar.InformationOptions.BackColor = Color.Khaki;
+            Snackbar.InformationOptions.ClosingIconColor = Color.Black;
+            Snackbar.InformationOptions.ActionForeColor = Color.Black;
+            Snackbar.InformationOptions.BorderColor = Color.FromArgb(220, 191, 80);
+            Snackbar.InformationOptions.ActionBackColor = Color.FromArgb(220, 191, 80);
+            Snackbar.InformationOptions.ActionBorderColor = Color.FromArgb(220, 191, 80);
+            Snackbar.InformationOptions.MessageFont = new Font("Segoe UI", 9F, FontStyle.Regular);
+            Snackbar.InformationOptions.ActionFont = new Font("Segoe UI", 8.25F, FontStyle.Regular);
+
+            return Snackbar.Show(this, message, BunifuSnackbar.MessageTypes.Information,
+                duration, action, position, host);
+        }
+
         #endregion
 
         #endregion
@@ -754,6 +817,7 @@ namespace WK.Apps.Sharp64.Views
 
             ApplyWindowSettings();
             RegisterHotkeys();
+            SetupUpdater();
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
@@ -789,7 +853,7 @@ namespace WK.Apps.Sharp64.Views
             if (e.Modifiers == Keys.Control && 
                 e.KeyCode == Keys.O)
             {
-                ChooseFile();
+                OpenFile();
 
                 e.Handled = true;
                 e.SuppressKeyPress = true;
@@ -889,12 +953,132 @@ namespace WK.Apps.Sharp64.Views
 
         private void PbChooseImage_Click(object sender, EventArgs e)
         {
-            ChooseFile(true);
+            OpenFile(true);
         }
 
-        private void pbDonate_Click(object sender, EventArgs e)
+        private void btnOpenFile_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.buymeacoffee.com/willykimura");
+            OpenFile();
+        }
+
+        private void btnSaveConversion_Click(object sender, EventArgs e)
+        {
+            SaveEncoding();
+        }
+
+        private void btnCopyConversion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(txtConversion.Text))
+                {
+                    Clipboard.SetText(txtConversion.Text);
+                    Notify("Conversion copied!");
+                }
+            }
+            catch (Exception) { }
+        }
+
+        private void btnPasteClipboardText_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string clipboardText = Clipboard.GetText();
+
+                if (!string.IsNullOrWhiteSpace(clipboardText))
+                {
+                    if (DefaultConversion)
+                    {
+                        if (EncoderDecoder.IsBase64Formatted(clipboardText))
+                        {
+                            txtConversion.Input.Focus();
+                            txtConversion.Text = clipboardText;
+                        }
+                        else
+                        {
+                            txtRaw.Input.Focus();
+                            txtRaw.Text = clipboardText;
+                        }
+                    }
+                    else
+                    {
+                        txtConversion.Input.Focus();
+                        txtConversion.Text = clipboardText;
+                    }
+                }
+            }
+            catch (Exception) { }
+        }
+
+        private void pbAbout_Click(object sender, EventArgs e)
+        {
+            new About().Show();
+        }
+
+        private void OnParseUpdateInfo(ParseUpdateInfoEventArgs args)
+        {
+            dynamic json = JsonConvert.DeserializeObject(args.RemoteData);
+            
+            args.UpdateInfo = new UpdateInfoEventArgs
+            {
+                CurrentVersion = json.Version,
+                ChangelogURL = json.ChangelogURL,
+                DownloadURL = json.DownloadURL,
+                Mandatory = json.Mandatory
+            };
+        }
+
+        private void OnCheckForUpdates(UpdateInfoEventArgs args)
+        {
+            try
+            {
+                Invoke((Action)delegate
+                {
+                    if (args != null)
+                    {
+                        if (args.IsUpdateAvailable)
+                        {
+                            Notify(
+                                $"A new update (v{args.CurrentVersion}) is available.",
+                                "UPDATE", BunifuSnackbar.Positions.TopCenter, BunifuSnackbar.Hosts.FormOwner,
+                                7000, 0, true)
+                            .Then((selection) =>
+                            {
+                                if (selection == BunifuSnackbar.SnackbarResult.ActionClicked)
+                                {
+                                    try
+                                    {
+                                        if (AutoUpdater.DownloadUpdate())
+                                            Close();
+                                    }
+                                    catch (Exception exception)
+                                    {
+                                        MessageBox.Show(
+                                            exception.Message, exception.GetType().ToString(),
+                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                            });
+                        }
+                        else
+                        {
+                            Notify(
+                                "There are no updates available at the moment.",
+                                "", BunifuSnackbar.Positions.TopCenter, BunifuSnackbar.Hosts.FormOwner,
+                                3000, 0, true);
+                        }
+                    }
+                    else
+                    {
+                        Notify(
+                            "There is a problem reaching the update server.\n" +
+                            "Please check your Internet connection and try again later.",
+                            "", BunifuSnackbar.Positions.TopCenter, BunifuSnackbar.Hosts.FormOwner,
+                            3000, 0, true);
+                    }
+                });
+            }
+            catch (Exception e) { MessageBox.Show(e.Message); }
         }
 
         private void NotifyIcon_Click(object sender, EventArgs e)

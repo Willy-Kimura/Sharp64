@@ -30,20 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
-            this.pbDonate = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.btnPasteClipboardText = new Bunifu.UI.WinForms.BunifuUserControl();
+            this.btnOpenFile = new Bunifu.UI.WinForms.BunifuUserControl();
+            this.btnSaveConversion = new Bunifu.UI.WinForms.BunifuUserControl();
+            this.btnCopyConversion = new Bunifu.UI.WinForms.BunifuUserControl();
+            this.pbAbout = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pbSettings = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnSwapSides = new Bunifu.UI.WinForms.BunifuUserControl();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -55,17 +59,17 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.txtRaw = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.bdrSplitter = new System.Windows.Forms.Label();
             this.pnlImageViewer = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
             this.pbImageViewer = new System.Windows.Forms.PictureBox();
             this.pbChooseImage = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lblImageFilename = new Bunifu.UI.WinForms.BunifuLabel();
             this.pbCloseImageViewer = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.hotkeyList1 = new WK.Apps.Sharp64.Views.Controls.HotkeyList();
             this.txtConversion = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.pgiLoader = new ProgressControls.ProgressIndicator();
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.hotkeyList1 = new WK.Apps.Sharp64.Views.Controls.HotkeyList();
             this.pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -118,7 +122,11 @@
             // 
             // pnlTitleBar
             // 
-            this.pnlTitleBar.Controls.Add(this.pbDonate);
+            this.pnlTitleBar.Controls.Add(this.btnPasteClipboardText);
+            this.pnlTitleBar.Controls.Add(this.btnOpenFile);
+            this.pnlTitleBar.Controls.Add(this.btnSaveConversion);
+            this.pnlTitleBar.Controls.Add(this.btnCopyConversion);
+            this.pnlTitleBar.Controls.Add(this.pbAbout);
             this.pnlTitleBar.Controls.Add(this.pbSettings);
             this.pnlTitleBar.Controls.Add(this.btnSwapSides);
             this.pnlTitleBar.Controls.Add(this.bunifuButton1);
@@ -137,41 +145,155 @@
             this.bunifuToolTip1.SetToolTipIcon(this.pnlTitleBar, null);
             this.bunifuToolTip1.SetToolTipTitle(this.pnlTitleBar, "");
             // 
-            // pbDonate
+            // btnPasteClipboardText
             // 
-            this.pbDonate.ActiveImage = null;
-            this.pbDonate.AllowAnimations = true;
-            this.pbDonate.AllowBuffering = false;
-            this.pbDonate.AllowZooming = false;
-            this.pbDonate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDonate.BackColor = System.Drawing.Color.Transparent;
-            this.pbDonate.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbDonate.ErrorImage")));
-            this.pbDonate.FadeWhenInactive = true;
-            this.pbDonate.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.pbDonate.Image = ((System.Drawing.Image)(resources.GetObject("pbDonate.Image")));
-            this.pbDonate.ImageActive = null;
-            this.pbDonate.ImageLocation = null;
-            this.pbDonate.ImageMargin = 22;
-            this.pbDonate.ImageSize = new System.Drawing.Size(18, 18);
-            this.pbDonate.ImageZoomSize = new System.Drawing.Size(40, 40);
-            this.pbDonate.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbDonate.InitialImage")));
-            this.pbDonate.Location = new System.Drawing.Point(648, 4);
-            this.pbDonate.Name = "pbDonate";
-            this.pbDonate.Rotation = 0;
-            this.pbDonate.ShowActiveImage = true;
-            this.pbDonate.ShowCursorChanges = true;
-            this.pbDonate.ShowImageBorders = true;
-            this.pbDonate.ShowSizeMarkers = false;
-            this.pbDonate.Size = new System.Drawing.Size(40, 40);
-            this.pbDonate.TabIndex = 23;
-            this.bunifuToolTip1.SetToolTip(this.pbDonate, "Give a thank-you donation to this project...");
-            this.bunifuToolTip1.SetToolTipIcon(this.pbDonate, null);
-            this.pbDonate.ToolTipText = "";
-            this.bunifuToolTip1.SetToolTipTitle(this.pbDonate, "");
-            this.pbDonate.WaitOnLoad = false;
-            this.pbDonate.Zoom = 22;
-            this.pbDonate.ZoomSpeed = 10;
-            this.pbDonate.Click += new System.EventHandler(this.pbDonate_Click);
+            this.btnPasteClipboardText.AllowAnimations = true;
+            this.btnPasteClipboardText.AllowBorderColorChanges = true;
+            this.btnPasteClipboardText.AllowMouseEffects = true;
+            this.btnPasteClipboardText.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPasteClipboardText.AnimationSpeed = 200;
+            this.btnPasteClipboardText.BackColor = System.Drawing.Color.Transparent;
+            this.btnPasteClipboardText.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.btnPasteClipboardText.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.btnPasteClipboardText.BorderRadius = 2;
+            this.btnPasteClipboardText.BorderThickness = 1;
+            this.btnPasteClipboardText.ColorContrastOnClick = 60;
+            this.btnPasteClipboardText.ColorContrastOnHover = 10;
+            this.btnPasteClipboardText.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPasteClipboardText.Image = ((System.Drawing.Image)(resources.GetObject("btnPasteClipboardText.Image")));
+            this.btnPasteClipboardText.ImageMargin = new System.Windows.Forms.Padding(3, 2, 6, -4);
+            this.btnPasteClipboardText.Location = new System.Drawing.Point(365, 8);
+            this.btnPasteClipboardText.Name = "btnPasteClipboardText";
+            this.btnPasteClipboardText.ShowBorders = true;
+            this.btnPasteClipboardText.Size = new System.Drawing.Size(31, 30);
+            this.btnPasteClipboardText.Style = Bunifu.UI.WinForms.BunifuUserControl.UserControlStyles.Round;
+            this.btnPasteClipboardText.TabIndex = 27;
+            this.bunifuToolTip1.SetToolTip(this.btnPasteClipboardText, "Paste clipboard text or conversion");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnPasteClipboardText, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnPasteClipboardText, "");
+            this.btnPasteClipboardText.Click += new System.EventHandler(this.btnPasteClipboardText_Click);
+            // 
+            // btnOpenFile
+            // 
+            this.btnOpenFile.AllowAnimations = true;
+            this.btnOpenFile.AllowBorderColorChanges = true;
+            this.btnOpenFile.AllowMouseEffects = true;
+            this.btnOpenFile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOpenFile.AnimationSpeed = 200;
+            this.btnOpenFile.BackColor = System.Drawing.Color.Transparent;
+            this.btnOpenFile.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.btnOpenFile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.btnOpenFile.BorderRadius = 2;
+            this.btnOpenFile.BorderThickness = 1;
+            this.btnOpenFile.ColorContrastOnClick = 60;
+            this.btnOpenFile.ColorContrastOnHover = 10;
+            this.btnOpenFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpenFile.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenFile.Image")));
+            this.btnOpenFile.ImageMargin = new System.Windows.Forms.Padding(3, 2, 6, -4);
+            this.btnOpenFile.Location = new System.Drawing.Point(331, 8);
+            this.btnOpenFile.Name = "btnOpenFile";
+            this.btnOpenFile.ShowBorders = true;
+            this.btnOpenFile.Size = new System.Drawing.Size(31, 30);
+            this.btnOpenFile.Style = Bunifu.UI.WinForms.BunifuUserControl.UserControlStyles.Round;
+            this.btnOpenFile.TabIndex = 26;
+            this.bunifuToolTip1.SetToolTip(this.btnOpenFile, "Open file or image...");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnOpenFile, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnOpenFile, "");
+            this.btnOpenFile.Visible = false;
+            this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
+            // 
+            // btnSaveConversion
+            // 
+            this.btnSaveConversion.AllowAnimations = true;
+            this.btnSaveConversion.AllowBorderColorChanges = true;
+            this.btnSaveConversion.AllowMouseEffects = true;
+            this.btnSaveConversion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSaveConversion.AnimationSpeed = 200;
+            this.btnSaveConversion.BackColor = System.Drawing.Color.Transparent;
+            this.btnSaveConversion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.btnSaveConversion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.btnSaveConversion.BorderRadius = 2;
+            this.btnSaveConversion.BorderThickness = 1;
+            this.btnSaveConversion.ColorContrastOnClick = 60;
+            this.btnSaveConversion.ColorContrastOnHover = 10;
+            this.btnSaveConversion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveConversion.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveConversion.Image")));
+            this.btnSaveConversion.ImageMargin = new System.Windows.Forms.Padding(3, 2, 6, -4);
+            this.btnSaveConversion.Location = new System.Drawing.Point(476, 8);
+            this.btnSaveConversion.Name = "btnSaveConversion";
+            this.btnSaveConversion.ShowBorders = true;
+            this.btnSaveConversion.Size = new System.Drawing.Size(31, 30);
+            this.btnSaveConversion.Style = Bunifu.UI.WinForms.BunifuUserControl.UserControlStyles.Round;
+            this.btnSaveConversion.TabIndex = 25;
+            this.bunifuToolTip1.SetToolTip(this.btnSaveConversion, "Save conversion");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnSaveConversion, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnSaveConversion, "");
+            this.btnSaveConversion.Visible = false;
+            this.btnSaveConversion.Click += new System.EventHandler(this.btnSaveConversion_Click);
+            // 
+            // btnCopyConversion
+            // 
+            this.btnCopyConversion.AllowAnimations = true;
+            this.btnCopyConversion.AllowBorderColorChanges = true;
+            this.btnCopyConversion.AllowMouseEffects = true;
+            this.btnCopyConversion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCopyConversion.AnimationSpeed = 200;
+            this.btnCopyConversion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCopyConversion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.btnCopyConversion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.btnCopyConversion.BorderRadius = 2;
+            this.btnCopyConversion.BorderThickness = 1;
+            this.btnCopyConversion.ColorContrastOnClick = 60;
+            this.btnCopyConversion.ColorContrastOnHover = 10;
+            this.btnCopyConversion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCopyConversion.Image = ((System.Drawing.Image)(resources.GetObject("btnCopyConversion.Image")));
+            this.btnCopyConversion.ImageMargin = new System.Windows.Forms.Padding(3, 2, 6, -4);
+            this.btnCopyConversion.Location = new System.Drawing.Point(442, 8);
+            this.btnCopyConversion.Name = "btnCopyConversion";
+            this.btnCopyConversion.ShowBorders = true;
+            this.btnCopyConversion.Size = new System.Drawing.Size(31, 30);
+            this.btnCopyConversion.Style = Bunifu.UI.WinForms.BunifuUserControl.UserControlStyles.Round;
+            this.btnCopyConversion.TabIndex = 24;
+            this.bunifuToolTip1.SetToolTip(this.btnCopyConversion, "Copy conversion");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnCopyConversion, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnCopyConversion, "");
+            this.btnCopyConversion.Click += new System.EventHandler(this.btnCopyConversion_Click);
+            // 
+            // pbAbout
+            // 
+            this.pbAbout.ActiveImage = null;
+            this.pbAbout.AllowAnimations = true;
+            this.pbAbout.AllowBuffering = false;
+            this.pbAbout.AllowZooming = false;
+            this.pbAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAbout.BackColor = System.Drawing.Color.Transparent;
+            this.pbAbout.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbAbout.ErrorImage")));
+            this.pbAbout.FadeWhenInactive = true;
+            this.pbAbout.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.pbAbout.Image = ((System.Drawing.Image)(resources.GetObject("pbAbout.Image")));
+            this.pbAbout.ImageActive = null;
+            this.pbAbout.ImageLocation = null;
+            this.pbAbout.ImageMargin = 21;
+            this.pbAbout.ImageSize = new System.Drawing.Size(19, 19);
+            this.pbAbout.ImageZoomSize = new System.Drawing.Size(40, 40);
+            this.pbAbout.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbAbout.InitialImage")));
+            this.pbAbout.Location = new System.Drawing.Point(648, 4);
+            this.pbAbout.Name = "pbAbout";
+            this.pbAbout.Rotation = 0;
+            this.pbAbout.ShowActiveImage = true;
+            this.pbAbout.ShowCursorChanges = true;
+            this.pbAbout.ShowImageBorders = true;
+            this.pbAbout.ShowSizeMarkers = false;
+            this.pbAbout.Size = new System.Drawing.Size(40, 40);
+            this.pbAbout.TabIndex = 23;
+            this.bunifuToolTip1.SetToolTip(this.pbAbout, "About <b>Sharp64</b>");
+            this.bunifuToolTip1.SetToolTipIcon(this.pbAbout, null);
+            this.pbAbout.ToolTipText = "";
+            this.bunifuToolTip1.SetToolTipTitle(this.pbAbout, "");
+            this.pbAbout.WaitOnLoad = false;
+            this.pbAbout.Zoom = 21;
+            this.pbAbout.ZoomSpeed = 10;
+            this.pbAbout.Click += new System.EventHandler(this.pbAbout_Click);
             // 
             // pbSettings
             // 
@@ -251,11 +373,11 @@
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
             this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges2;
             this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
@@ -276,24 +398,24 @@
             this.bunifuButton1.IndicateFocus = false;
             this.bunifuButton1.Location = new System.Drawing.Point(100, 12);
             this.bunifuButton1.Name = "bunifuButton1";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties1.BorderRadius = 2;
-            stateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties1.ForeColor = System.Drawing.Color.Silver;
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties2.BorderRadius = 2;
-            stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties2.BorderThickness = 1;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.bunifuButton1.OnPressedState = stateProperties2;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties11.BorderRadius = 2;
+            stateProperties11.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties11.BorderThickness = 1;
+            stateProperties11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties11.ForeColor = System.Drawing.Color.Silver;
+            stateProperties11.IconLeftImage = null;
+            stateProperties11.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties12.BorderRadius = 2;
+            stateProperties12.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties12.BorderThickness = 1;
+            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
+            stateProperties12.IconLeftImage = null;
+            stateProperties12.IconRightImage = null;
+            this.bunifuButton1.OnPressedState = stateProperties12;
             this.bunifuButton1.Size = new System.Drawing.Size(185, 23);
             this.bunifuButton1.TabIndex = 20;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -463,7 +585,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.txtRaw);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.bdrSplitter);
             this.splitContainer1.Panel1.Controls.Add(this.pnlImageViewer);
             this.splitContainer1.Panel1.Controls.Add(this.hotkeyList1);
             this.bunifuToolTip1.SetToolTip(this.splitContainer1.Panel1, "");
@@ -519,26 +641,26 @@
             this.txtRaw.Modified = false;
             this.txtRaw.Multiline = true;
             this.txtRaw.Name = "txtRaw";
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties3.ForeColor = System.Drawing.Color.White;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtRaw.OnActiveState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Empty;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtRaw.OnDisabledState = stateProperties4;
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties5.ForeColor = System.Drawing.Color.White;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtRaw.OnHoverState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties6.ForeColor = System.Drawing.Color.White;
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.txtRaw.OnIdleState = stateProperties6;
+            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties13.ForeColor = System.Drawing.Color.White;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtRaw.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.Empty;
+            stateProperties14.FillColor = System.Drawing.Color.White;
+            stateProperties14.ForeColor = System.Drawing.Color.Empty;
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtRaw.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties15.ForeColor = System.Drawing.Color.White;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtRaw.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties16.ForeColor = System.Drawing.Color.White;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.txtRaw.OnIdleState = stateProperties16;
             this.txtRaw.PasswordChar = '\0';
             this.txtRaw.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.txtRaw.PlaceholderText = "Begin typing...";
@@ -564,19 +686,19 @@
             this.txtRaw.TextChanged += new System.EventHandler(this.TxtRaw_TextChanged);
             this.txtRaw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnIputsKeyDown);
             // 
-            // label1
+            // bdrSplitter
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(416, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1, 441);
-            this.label1.TabIndex = 16;
-            this.bunifuToolTip1.SetToolTip(this.label1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.label1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.label1, "");
+            this.bdrSplitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.bdrSplitter.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bdrSplitter.Enabled = false;
+            this.bdrSplitter.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bdrSplitter.Location = new System.Drawing.Point(416, 0);
+            this.bdrSplitter.Name = "bdrSplitter";
+            this.bdrSplitter.Size = new System.Drawing.Size(1, 441);
+            this.bdrSplitter.TabIndex = 16;
+            this.bunifuToolTip1.SetToolTip(this.bdrSplitter, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bdrSplitter, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bdrSplitter, "");
             // 
             // pnlImageViewer
             // 
@@ -705,6 +827,20 @@
             this.pbCloseImageViewer.ZoomSpeed = 10;
             this.pbCloseImageViewer.Click += new System.EventHandler(this.PbCloseImageViewer_Click);
             // 
+            // hotkeyList1
+            // 
+            this.hotkeyList1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.hotkeyList1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.hotkeyList1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.hotkeyList1.ForeColor = System.Drawing.Color.White;
+            this.hotkeyList1.Location = new System.Drawing.Point(3, 116);
+            this.hotkeyList1.Name = "hotkeyList1";
+            this.hotkeyList1.Size = new System.Drawing.Size(406, 209);
+            this.hotkeyList1.TabIndex = 17;
+            this.bunifuToolTip1.SetToolTip(this.hotkeyList1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.hotkeyList1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.hotkeyList1, "");
+            // 
             // txtConversion
             // 
             this.txtConversion.AcceptsReturn = false;
@@ -740,26 +876,26 @@
             this.txtConversion.Modified = false;
             this.txtConversion.Multiline = true;
             this.txtConversion.Name = "txtConversion";
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties7.ForeColor = System.Drawing.Color.White;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtConversion.OnActiveState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Empty;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtConversion.OnDisabledState = stateProperties8;
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties9.ForeColor = System.Drawing.Color.White;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtConversion.OnHoverState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            stateProperties10.ForeColor = System.Drawing.Color.White;
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.txtConversion.OnIdleState = stateProperties10;
+            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties17.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties17.ForeColor = System.Drawing.Color.White;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtConversion.OnActiveState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.Empty;
+            stateProperties18.FillColor = System.Drawing.Color.White;
+            stateProperties18.ForeColor = System.Drawing.Color.Empty;
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtConversion.OnDisabledState = stateProperties18;
+            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties19.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties19.ForeColor = System.Drawing.Color.White;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtConversion.OnHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            stateProperties20.ForeColor = System.Drawing.Color.White;
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.txtConversion.OnIdleState = stateProperties20;
             this.txtConversion.PasswordChar = '\0';
             this.txtConversion.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.txtConversion.PlaceholderText = "Base64 conversions show here...";
@@ -841,20 +977,6 @@
             this.notifyIcon1.Text = "Sharp64";
             this.notifyIcon1.Click += new System.EventHandler(this.NotifyIcon_Click);
             // 
-            // hotkeyList1
-            // 
-            this.hotkeyList1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.hotkeyList1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.hotkeyList1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.hotkeyList1.ForeColor = System.Drawing.Color.White;
-            this.hotkeyList1.Location = new System.Drawing.Point(3, 116);
-            this.hotkeyList1.Name = "hotkeyList1";
-            this.hotkeyList1.Size = new System.Drawing.Size(406, 209);
-            this.hotkeyList1.TabIndex = 17;
-            this.bunifuToolTip1.SetToolTip(this.hotkeyList1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.hotkeyList1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.hotkeyList1, "");
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -894,7 +1016,7 @@
         private System.Windows.Forms.Label bdrSeparator1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label bdrSplitter;
         private System.Windows.Forms.PictureBox pbAppIcon;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private ProgressControls.ProgressIndicator pgiLoader;
@@ -910,7 +1032,11 @@
         public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtRaw;
         public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtConversion;
         private Controls.HotkeyList hotkeyList1;
-        private Bunifu.UI.WinForms.BunifuImageButton pbDonate;
+        private Bunifu.UI.WinForms.BunifuImageButton pbAbout;
+        private Bunifu.UI.WinForms.BunifuUserControl btnCopyConversion;
+        private Bunifu.UI.WinForms.BunifuUserControl btnSaveConversion;
+        private Bunifu.UI.WinForms.BunifuUserControl btnOpenFile;
+        private Bunifu.UI.WinForms.BunifuUserControl btnPasteClipboardText;
     }
 }
 

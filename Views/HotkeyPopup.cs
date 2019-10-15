@@ -18,13 +18,19 @@ namespace WK.Apps.Sharp64.Views
 
         #endregion
 
-        #region Fields
+        #region Properties
 
         /// <summary>
         /// Gets or sets the globally selected text.
         /// </summary>
         public string Selection { get; set; }
-        
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the 
+        /// default conversion is from Base64 to plain text.
+        /// </summary>
+        public bool DefaultConversion { get; set; } = true;
+
         #endregion
 
         #region Methods
@@ -78,12 +84,6 @@ namespace WK.Apps.Sharp64.Views
             }
             catch (Exception) { }
         }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether the 
-        /// default conversion is from Base64 to plain text.
-        /// </summary>
-        public bool DefaultConversion { get; set; } = true;
 
         #endregion
 
