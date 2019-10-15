@@ -1,0 +1,17 @@
+Hello there!
+
+Thanks for downloading Sharp64 - A Base64 encoding/decoding utility.
+Once installed, you will be able to easily access it via its Desktop shortcut.
+
+EULA, Copyright (c) 2019 Willy Kimura
+
+Permission is hereby granted, to any person obtaining a copy of 
+this software and associated documentation files (the "Software"), to deal 
+in the Software only for personal use. You are not allowed to copy, modify, 
+merge, publish, distribute, sublicense, and/or sell copies of this Software.
+In no event shall the authors or copyright holders be liable for any claim, 
+damages or other liability, whether in an action of contract, tort or otherwise, 
+arising from, out of or in connection with the software or the use or other 
+dealings in the software.
+
+The above copyright notice is to remain solely with the Software.
