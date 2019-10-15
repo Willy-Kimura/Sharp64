@@ -37,7 +37,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\VitalRay\source\repos\apps\Sharp64\bin\Debug\Sharp64.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\VitalRay\source\repos\apps\Sharp64\bin\Debug\*"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\VitalRay\source\repos\apps\Sharp64\Assets\Fonts\Product Sans Light.ttf"; DestDir: "{fonts}"; FontInstall: "Product Sans Light"; Flags: onlyifdoesntexist uninsneveruninstall
 Source: "C:\Users\VitalRay\source\repos\apps\Sharp64\Assets\Fonts\Product Sans Light Italic.ttf"; DestDir: "{fonts}"; FontInstall: "Product Sans Light"; Flags: onlyifdoesntexist uninsneveruninstall
 Source: "C:\Users\VitalRay\source\repos\apps\Sharp64\Assets\Fonts\Cascadia.ttf"; DestDir: "{fonts}"; FontInstall: "Cascadia Code"; Flags: onlyifdoesntexist uninsneveruninstall

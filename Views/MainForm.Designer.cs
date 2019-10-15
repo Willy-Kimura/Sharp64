@@ -637,7 +637,7 @@
             this.txtRaw.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRaw.Lines = new string[0];
             this.txtRaw.Location = new System.Drawing.Point(0, 0);
-            this.txtRaw.MaxLength = 32767;
+            this.txtRaw.MaxLength = 2147483646;
             this.txtRaw.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtRaw.Modified = false;
             this.txtRaw.Multiline = true;
@@ -872,7 +872,7 @@
             this.txtConversion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtConversion.Lines = new string[0];
             this.txtConversion.Location = new System.Drawing.Point(0, 0);
-            this.txtConversion.MaxLength = 32767;
+            this.txtConversion.MaxLength = 2147483646;
             this.txtConversion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtConversion.Modified = false;
             this.txtConversion.Multiline = true;

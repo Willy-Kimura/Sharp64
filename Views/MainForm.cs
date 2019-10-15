@@ -125,7 +125,7 @@ namespace WK.Apps.Sharp64.Views
 
             base.Show();
 
-            Transition.run(this, "Opacity", 1.0, new TransitionType_EaseInEaseOut(600));
+            Transition.run(this, "Opacity", 1.0, new TransitionType_EaseInEaseOut(500));
         }
 
         /// <summary>
@@ -372,6 +372,8 @@ namespace WK.Apps.Sharp64.Views
         {
             pnlImageViewer.Show();
             pnlImageViewer.BringToFront();
+
+            txtConversion.ReadOnly = true;
         }
 
         /// <summary>
@@ -381,6 +383,9 @@ namespace WK.Apps.Sharp64.Views
         {
             pnlImageViewer.Hide();
             pnlImageViewer.SendToBack();
+
+            txtConversion.Clear();
+            txtConversion.ReadOnly = false;
 
             if (DefaultConversion)
             {
