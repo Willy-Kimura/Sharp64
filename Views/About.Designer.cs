@@ -30,16 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.btnCheckForUpdates = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pbAppIcon = new System.Windows.Forms.PictureBox();
             this.pbClose = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bdrSeparator1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.pbBuyCoffee = new System.Windows.Forms.PictureBox();
+            this.lblTitleAppreciation = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bdrSeparator4 = new System.Windows.Forms.Label();
+            this.lblAppreciation = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblProgressIndicator = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblUpdatesManager = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblTitleThirdParties = new Bunifu.UI.WinForms.BunifuLabel();
@@ -55,16 +60,11 @@
             this.lblAppDescription = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblUI = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
-            this.lblTitleAppreciation = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bdrSeparator4 = new System.Windows.Forms.Label();
-            this.lblAppreciation = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pbBuyCoffee = new System.Windows.Forms.PictureBox();
-            this.btnCheckForUpdates = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).BeginInit();
             this.pnlContent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAppIconLarge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuyCoffee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAppIconLarge)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitleBar
@@ -82,6 +82,73 @@
             this.bunifuToolTip1.SetToolTip(this.pnlTitleBar, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnlTitleBar, null);
             this.bunifuToolTip1.SetToolTipTitle(this.pnlTitleBar, "");
+            // 
+            // btnCheckForUpdates
+            // 
+            this.btnCheckForUpdates.AllowToggling = false;
+            this.btnCheckForUpdates.AnimationSpeed = 200;
+            this.btnCheckForUpdates.AutoGenerateColors = false;
+            this.btnCheckForUpdates.BackColor = System.Drawing.Color.Transparent;
+            this.btnCheckForUpdates.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(93)))));
+            this.btnCheckForUpdates.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCheckForUpdates.BackgroundImage")));
+            this.btnCheckForUpdates.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCheckForUpdates.ButtonText = "CHECK FOR UPDATES";
+            this.btnCheckForUpdates.ButtonTextMarginLeft = 1;
+            this.btnCheckForUpdates.ColorContrastOnClick = 45;
+            this.btnCheckForUpdates.ColorContrastOnHover = 45;
+            this.btnCheckForUpdates.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnCheckForUpdates.CustomizableEdges = borderEdges1;
+            this.btnCheckForUpdates.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCheckForUpdates.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.btnCheckForUpdates.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            this.btnCheckForUpdates.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
+            this.btnCheckForUpdates.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
+            this.btnCheckForUpdates.Font = new System.Drawing.Font("Product Sans Light", 8.249999F);
+            this.btnCheckForUpdates.ForeColor = System.Drawing.Color.LightGray;
+            this.btnCheckForUpdates.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckForUpdates.IconMarginLeft = 11;
+            this.btnCheckForUpdates.IconPadding = 10;
+            this.btnCheckForUpdates.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckForUpdates.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(93)))));
+            this.btnCheckForUpdates.IdleBorderRadius = 2;
+            this.btnCheckForUpdates.IdleBorderThickness = 1;
+            this.btnCheckForUpdates.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(93)))));
+            this.btnCheckForUpdates.IdleIconLeftImage = null;
+            this.btnCheckForUpdates.IdleIconRightImage = null;
+            this.btnCheckForUpdates.IndicateFocus = false;
+            this.btnCheckForUpdates.Location = new System.Drawing.Point(255, 10);
+            this.btnCheckForUpdates.Name = "btnCheckForUpdates";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties1.BorderRadius = 2;
+            stateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties1.ForeColor = System.Drawing.Color.Silver;
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btnCheckForUpdates.onHoverState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties2.BorderRadius = 2;
+            stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btnCheckForUpdates.OnPressedState = stateProperties2;
+            this.btnCheckForUpdates.Size = new System.Drawing.Size(138, 26);
+            this.btnCheckForUpdates.TabIndex = 22;
+            this.btnCheckForUpdates.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCheckForUpdates.TextMarginLeft = 1;
+            this.bunifuToolTip1.SetToolTip(this.btnCheckForUpdates, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnCheckForUpdates, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnCheckForUpdates, "");
+            this.btnCheckForUpdates.UseDefaultRadiusAndThickness = true;
+            this.btnCheckForUpdates.Click += new System.EventHandler(this.btnCheckForUpdates_Click);
             // 
             // pbAppIcon
             // 
@@ -225,6 +292,77 @@
             this.bunifuToolTip1.SetToolTip(this.pnlContent, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnlContent, null);
             this.bunifuToolTip1.SetToolTipTitle(this.pnlContent, "");
+            // 
+            // pbBuyCoffee
+            // 
+            this.pbBuyCoffee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBuyCoffee.Image = ((System.Drawing.Image)(resources.GetObject("pbBuyCoffee.Image")));
+            this.pbBuyCoffee.Location = new System.Drawing.Point(33, 406);
+            this.pbBuyCoffee.Name = "pbBuyCoffee";
+            this.pbBuyCoffee.Size = new System.Drawing.Size(127, 30);
+            this.pbBuyCoffee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBuyCoffee.TabIndex = 38;
+            this.pbBuyCoffee.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pbBuyCoffee, "Give a thank-you donation...");
+            this.bunifuToolTip1.SetToolTipIcon(this.pbBuyCoffee, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pbBuyCoffee, "");
+            this.pbBuyCoffee.Click += new System.EventHandler(this.pbBuyCoffee_Click);
+            // 
+            // lblTitleAppreciation
+            // 
+            this.lblTitleAppreciation.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.lblTitleAppreciation.AutoEllipsis = false;
+            this.lblTitleAppreciation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTitleAppreciation.CursorType = System.Windows.Forms.Cursors.Hand;
+            this.lblTitleAppreciation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleAppreciation.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblTitleAppreciation.Location = new System.Drawing.Point(34, 336);
+            this.lblTitleAppreciation.Name = "lblTitleAppreciation";
+            this.lblTitleAppreciation.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTitleAppreciation.Size = new System.Drawing.Size(71, 17);
+            this.lblTitleAppreciation.TabIndex = 36;
+            this.lblTitleAppreciation.Text = "Appreciation";
+            this.lblTitleAppreciation.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTitleAppreciation.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuToolTip1.SetToolTip(this.lblTitleAppreciation, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lblTitleAppreciation, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lblTitleAppreciation, "");
+            // 
+            // bdrSeparator4
+            // 
+            this.bdrSeparator4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bdrSeparator4.BackColor = System.Drawing.Color.DimGray;
+            this.bdrSeparator4.Enabled = false;
+            this.bdrSeparator4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bdrSeparator4.Location = new System.Drawing.Point(112, 345);
+            this.bdrSeparator4.Name = "bdrSeparator4";
+            this.bdrSeparator4.Size = new System.Drawing.Size(293, 1);
+            this.bdrSeparator4.TabIndex = 35;
+            this.bunifuToolTip1.SetToolTip(this.bdrSeparator4, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bdrSeparator4, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bdrSeparator4, "");
+            // 
+            // lblAppreciation
+            // 
+            this.lblAppreciation.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.lblAppreciation.AutoEllipsis = false;
+            this.lblAppreciation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAppreciation.CursorType = System.Windows.Forms.Cursors.Hand;
+            this.lblAppreciation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppreciation.ForeColor = System.Drawing.Color.White;
+            this.lblAppreciation.Location = new System.Drawing.Point(35, 362);
+            this.lblAppreciation.Name = "lblAppreciation";
+            this.lblAppreciation.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblAppreciation.Size = new System.Drawing.Size(356, 32);
+            this.lblAppreciation.TabIndex = 37;
+            this.lblAppreciation.Text = "A big thank you to all the people who\'ve appreciated this nifty little\r\nutility a" +
+    "nd to all of my projects\' supporters. Thank you.";
+            this.lblAppreciation.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblAppreciation.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuToolTip1.SetToolTip(this.lblAppreciation, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lblAppreciation, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lblAppreciation, "");
             // 
             // lblProgressIndicator
             // 
@@ -535,144 +673,6 @@
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = this.pnlTitleBar;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // lblTitleAppreciation
-            // 
-            this.lblTitleAppreciation.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.lblTitleAppreciation.AutoEllipsis = false;
-            this.lblTitleAppreciation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblTitleAppreciation.CursorType = System.Windows.Forms.Cursors.Hand;
-            this.lblTitleAppreciation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleAppreciation.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblTitleAppreciation.Location = new System.Drawing.Point(34, 336);
-            this.lblTitleAppreciation.Name = "lblTitleAppreciation";
-            this.lblTitleAppreciation.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTitleAppreciation.Size = new System.Drawing.Size(71, 17);
-            this.lblTitleAppreciation.TabIndex = 36;
-            this.lblTitleAppreciation.Text = "Appreciation";
-            this.lblTitleAppreciation.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblTitleAppreciation.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.bunifuToolTip1.SetToolTip(this.lblTitleAppreciation, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.lblTitleAppreciation, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.lblTitleAppreciation, "");
-            // 
-            // bdrSeparator4
-            // 
-            this.bdrSeparator4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bdrSeparator4.BackColor = System.Drawing.Color.DimGray;
-            this.bdrSeparator4.Enabled = false;
-            this.bdrSeparator4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bdrSeparator4.Location = new System.Drawing.Point(112, 345);
-            this.bdrSeparator4.Name = "bdrSeparator4";
-            this.bdrSeparator4.Size = new System.Drawing.Size(293, 1);
-            this.bdrSeparator4.TabIndex = 35;
-            this.bunifuToolTip1.SetToolTip(this.bdrSeparator4, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bdrSeparator4, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bdrSeparator4, "");
-            // 
-            // lblAppreciation
-            // 
-            this.lblAppreciation.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.lblAppreciation.AutoEllipsis = false;
-            this.lblAppreciation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAppreciation.CursorType = System.Windows.Forms.Cursors.Hand;
-            this.lblAppreciation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppreciation.ForeColor = System.Drawing.Color.White;
-            this.lblAppreciation.Location = new System.Drawing.Point(35, 362);
-            this.lblAppreciation.Name = "lblAppreciation";
-            this.lblAppreciation.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblAppreciation.Size = new System.Drawing.Size(356, 32);
-            this.lblAppreciation.TabIndex = 37;
-            this.lblAppreciation.Text = "A big thank you to all the people who\'ve appreciated this nifty little\r\nutility a" +
-    "nd to all of my projects\' supporters. Thank you.";
-            this.lblAppreciation.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblAppreciation.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.bunifuToolTip1.SetToolTip(this.lblAppreciation, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.lblAppreciation, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.lblAppreciation, "");
-            // 
-            // pbBuyCoffee
-            // 
-            this.pbBuyCoffee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbBuyCoffee.Image = ((System.Drawing.Image)(resources.GetObject("pbBuyCoffee.Image")));
-            this.pbBuyCoffee.Location = new System.Drawing.Point(33, 406);
-            this.pbBuyCoffee.Name = "pbBuyCoffee";
-            this.pbBuyCoffee.Size = new System.Drawing.Size(127, 30);
-            this.pbBuyCoffee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbBuyCoffee.TabIndex = 38;
-            this.pbBuyCoffee.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.pbBuyCoffee, "Give a thank-you donation...");
-            this.bunifuToolTip1.SetToolTipIcon(this.pbBuyCoffee, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.pbBuyCoffee, "");
-            this.pbBuyCoffee.Click += new System.EventHandler(this.pbBuyCoffee_Click);
-            // 
-            // btnCheckForUpdates
-            // 
-            this.btnCheckForUpdates.AllowToggling = false;
-            this.btnCheckForUpdates.AnimationSpeed = 200;
-            this.btnCheckForUpdates.AutoGenerateColors = false;
-            this.btnCheckForUpdates.BackColor = System.Drawing.Color.Transparent;
-            this.btnCheckForUpdates.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(93)))));
-            this.btnCheckForUpdates.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCheckForUpdates.BackgroundImage")));
-            this.btnCheckForUpdates.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCheckForUpdates.ButtonText = "CHECK FOR UPDATES";
-            this.btnCheckForUpdates.ButtonTextMarginLeft = 1;
-            this.btnCheckForUpdates.ColorContrastOnClick = 45;
-            this.btnCheckForUpdates.ColorContrastOnHover = 45;
-            this.btnCheckForUpdates.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnCheckForUpdates.CustomizableEdges = borderEdges2;
-            this.btnCheckForUpdates.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCheckForUpdates.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            this.btnCheckForUpdates.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            this.btnCheckForUpdates.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
-            this.btnCheckForUpdates.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
-            this.btnCheckForUpdates.Font = new System.Drawing.Font("Product Sans Light", 8.249999F);
-            this.btnCheckForUpdates.ForeColor = System.Drawing.Color.LightGray;
-            this.btnCheckForUpdates.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCheckForUpdates.IconMarginLeft = 11;
-            this.btnCheckForUpdates.IconPadding = 10;
-            this.btnCheckForUpdates.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCheckForUpdates.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(93)))));
-            this.btnCheckForUpdates.IdleBorderRadius = 2;
-            this.btnCheckForUpdates.IdleBorderThickness = 1;
-            this.btnCheckForUpdates.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(93)))));
-            this.btnCheckForUpdates.IdleIconLeftImage = null;
-            this.btnCheckForUpdates.IdleIconRightImage = null;
-            this.btnCheckForUpdates.IndicateFocus = false;
-            this.btnCheckForUpdates.Location = new System.Drawing.Point(255, 10);
-            this.btnCheckForUpdates.Name = "btnCheckForUpdates";
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties3.BorderRadius = 2;
-            stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties3.ForeColor = System.Drawing.Color.Silver;
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.btnCheckForUpdates.onHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties4.BorderRadius = 2;
-            stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties4.BorderThickness = 1;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(63)))));
-            stateProperties4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(125)))), ((int)(((byte)(151)))));
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.btnCheckForUpdates.OnPressedState = stateProperties4;
-            this.btnCheckForUpdates.Size = new System.Drawing.Size(138, 26);
-            this.btnCheckForUpdates.TabIndex = 22;
-            this.btnCheckForUpdates.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCheckForUpdates.TextMarginLeft = 1;
-            this.bunifuToolTip1.SetToolTip(this.btnCheckForUpdates, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnCheckForUpdates, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnCheckForUpdates, "");
-            this.btnCheckForUpdates.UseDefaultRadiusAndThickness = true;
-            this.btnCheckForUpdates.Click += new System.EventHandler(this.btnCheckForUpdates_Click);
-            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -688,6 +688,7 @@
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sharp64 Conversions";
+            this.TopMost = true;
             this.Deactivate += new System.EventHandler(this.About_Deactivate);
             this.Load += new System.EventHandler(this.About_Load);
             this.Shown += new System.EventHandler(this.About_Shown);
@@ -696,8 +697,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).EndInit();
             this.pnlContent.ResumeLayout(false);
             this.pnlContent.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAppIconLarge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuyCoffee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAppIconLarge)).EndInit();
             this.ResumeLayout(false);
 
         }

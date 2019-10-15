@@ -56,11 +56,12 @@ namespace WK.Apps.Sharp64.Views
         // using the CreateParams override.
         private const int CS_DBLCLKS = 0x8;
         private const int WS_MINIMIZEBOX = 0x20000;
-    
+
+        // List of forms and objects used 
+        // within the application.
         private static MainForm _instance;
         private Settings _settings = new Settings();
         private static HotkeyPopup _popup = new HotkeyPopup();
-        private BunifuSnackbar Snackbar = new BunifuSnackbar();
         public static HotkeyListener HotkeyListener = new HotkeyListener();
 
         #endregion
@@ -760,46 +761,6 @@ namespace WK.Apps.Sharp64.Views
             catch (Exception) { }
         }
 
-        /// <summary>
-        /// Displays a snackbar notification.
-        /// </summary>
-        /// <param name="message">The message to be displayed.</param>
-        /// <param name="action">The snackbar's action message. (optional)</param>
-        /// <param name="position">The snackbar's position area.</param>
-        /// <param name="host">The snackbar's host or owner.</param>
-        /// <param name="duration">How long should the snackbar stay.</param>
-        /// <param name="margin">The distance betweeen the snackbar and its host.</param>
-        /// <param name="showClosingIcon">Show the snackbar's closing icon?</param>
-        /// <returns></returns>
-        public BunifuSnackbar.SnackbarResult Notify(string message, string action = "",
-            BunifuSnackbar.Positions position = BunifuSnackbar.Positions.BottomCenter,
-            BunifuSnackbar.Hosts host = BunifuSnackbar.Hosts.FormOwner, int duration = 3000,
-            int margin = 0, bool showClosingIcon = false)
-        {
-            Snackbar.ShowBorders = true;
-            Snackbar.ShowShadows = false;
-            Snackbar.FadeClosingIcon = true;
-            Snackbar.ZoomClosingIcon = false;
-            Snackbar.ShowSnackbarIcon = false;
-            Snackbar.ShowClosingIcon = showClosingIcon;
-
-            Snackbar.Margin = margin;
-            Snackbar.MessageRightMargin = 0;
-
-            Snackbar.InformationOptions.MessageForeColor = Color.Black;
-            Snackbar.InformationOptions.BackColor = Color.Khaki;
-            Snackbar.InformationOptions.ClosingIconColor = Color.Black;
-            Snackbar.InformationOptions.ActionForeColor = Color.Black;
-            Snackbar.InformationOptions.BorderColor = Color.FromArgb(220, 191, 80);
-            Snackbar.InformationOptions.ActionBackColor = Color.FromArgb(220, 191, 80);
-            Snackbar.InformationOptions.ActionBorderColor = Color.FromArgb(220, 191, 80);
-            Snackbar.InformationOptions.MessageFont = new Font("Segoe UI", 9F, FontStyle.Regular);
-            Snackbar.InformationOptions.ActionFont = new Font("Segoe UI", 8.25F, FontStyle.Regular);
-
-            return Snackbar.Show(this, message, BunifuSnackbar.MessageTypes.Information,
-                duration, action, position, host);
-        }
-
         #endregion
 
         #endregion
@@ -973,7 +934,6 @@ namespace WK.Apps.Sharp64.Views
                 if (!string.IsNullOrWhiteSpace(txtConversion.Text))
                 {
                     Clipboard.SetText(txtConversion.Text);
-                    Notify("Conversion copied!");
                 }
             }
             catch (Exception) { }
@@ -1038,43 +998,41 @@ namespace WK.Apps.Sharp64.Views
                     {
                         if (args.IsUpdateAvailable)
                         {
-                            Notify(
-                                $"A new update (v{args.CurrentVersion}) is available.",
-                                "UPDATE", BunifuSnackbar.Positions.TopCenter, BunifuSnackbar.Hosts.FormOwner,
-                                7000, 0, true)
-                            .Then((selection) =>
+                            var result = MessageBox.Show(
+                                this, 
+                                $"A new update (v{args.CurrentVersion}) is available.\n" +
+                                $"Would you like to update now?",
+                                "Update Available", MessageBoxButtons.YesNo);
+
+                            if (result == DialogResult.Yes)
                             {
-                                if (selection == BunifuSnackbar.SnackbarResult.ActionClicked)
+                                try
                                 {
-                                    try
-                                    {
-                                        if (AutoUpdater.DownloadUpdate())
-                                            Close();
-                                    }
-                                    catch (Exception exception)
-                                    {
-                                        MessageBox.Show(
-                                            exception.Message, exception.GetType().ToString(),
-                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    }
+                                    if (AutoUpdater.DownloadUpdate())
+                                        Close();
                                 }
-                            });
+                                catch (Exception exception)
+                                {
+                                    MessageBox.Show(
+                                        exception.Message, exception.GetType().ToString(),
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
                         }
                         else
                         {
-                            Notify(
-                                "There are no updates available at the moment.",
-                                "", BunifuSnackbar.Positions.TopCenter, BunifuSnackbar.Hosts.FormOwner,
-                                3000, 0, true);
+                            MessageBox.Show(
+                                this, "There are no updates available at the moment.",
+                                "No Updates Available");
                         }
                     }
                     else
                     {
-                        Notify(
-                            "There is a problem reaching the update server.\n" +
-                            "Please check your Internet connection and try again later.",
-                            "", BunifuSnackbar.Positions.TopCenter, BunifuSnackbar.Hosts.FormOwner,
-                            3000, 0, true);
+                        MessageBox.Show(
+                                this,
+                                "There was a problem reaching the update server.\n" +
+                                "Please check your Internet connection and try again.",
+                                "Problem Reaching Server");
                     }
                 });
             }

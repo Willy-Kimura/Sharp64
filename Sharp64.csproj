@@ -62,9 +62,6 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
       <HintPath>bin\Debug\Libraries\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
-      <HintPath>bin\Debug\Libraries\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
-    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>bin\Debug\Libraries\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>

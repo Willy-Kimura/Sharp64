@@ -118,6 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCheckForUpdates.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIoAAAAaCAYAAABo4cQnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVGhD7dKxDcIwAERR7wOJ5LAAE7BA7EHYgj2pqFNA
+        QJ/OOhjgn/S6K39x7u8dTuv5WNt9WvpT+vo0UdcLmZQy1f4YHaWpto1M9lBGBwlkYijKyMRQlJGJoSgj
+        E0NRRiaGooxMDEUZmRiKMjIxFGVkYijKyMRQlJGJoSgjE0NRRiaGooxMDEUZmRiKMjIxFGVkYijKyMRQ
+        lJGJoSgjkz2U2rbRQXojk1LmpV1HB2mu/UYmzv1aKS+pPA7XTr7t5QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="bunifuToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="pbAppIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAZpJREFUaEPt
@@ -583,9 +595,6 @@
         RK5CYII=
 </value>
   </data>
-  <metadata name="bunifuToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="pbBuyCoffee.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAl4AAACZCAYAAAD+UzSjAAAABGdBTUEAALGPC/xhBQAAIlxJREFUeF7t
@@ -2471,15 +2480,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAA//8AAP//AACAAwAAgAMAAIADAACAAwAAgAMAAIADAACAAwAAgAMAAIADAACA
         AwAAgAMAAIADAADAAwAA//8AAA==
-</value>
-  </data>
-  <data name="btnCheckForUpdates.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIoAAAAaCAYAAABo4cQnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVGhD7dKxDcIwAERR7wOJ5LAAE7BA7EHYgj2pqFNA
-        QJ/OOhjgn/S6K39x7u8dTuv5WNt9WvpT+vo0UdcLmZQy1f4YHaWpto1M9lBGBwlkYijKyMRQlJGJoSgj
-        E0NRRiaGooxMDEUZmRiKMjIxFGVkYijKyMRQlJGJoSgjE0NRRiaGooxMDEUZmRiKMjIxFGVkYijKyMRQ
-        lJGJoSgjkz2U2rbRQXojk1LmpV1HB2mu/UYmzv1aKS+pPA7XTr7t5QAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>
