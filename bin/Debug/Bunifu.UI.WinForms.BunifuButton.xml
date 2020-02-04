@@ -321,11 +321,6 @@
             Gets or sets the Button's text alignment.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuButton.BunifuButton.CreateParams">
-            <summary>
-            Gets the list of created control parameters.
-            </summary>
-        </member>
         <member name="T:Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties">
             <summary>
             Provides options for use when creating a 
@@ -420,14 +415,9 @@
             list of properties and their applied values.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuButton.BunifuButton.IconLeftClick">
+        <member name="P:Bunifu.UI.WinForms.BunifuButton.BunifuButton.CreateParams">
             <summary>
-            Occurs when the Button's left icon is clicked.
-            </summary>
-        </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuButton.BunifuButton.IconRightClick">
-            <summary>
-            Occurs when the Button's right icon is clicked.
+            Gets the list of created control parameters.
             </summary>
         </member>
         <member name="M:Bunifu.UI.WinForms.BunifuButton.BunifuButton.GetCurrentState">
@@ -441,6 +431,14 @@
             </summary>
             <param name="useTimer">Loop redraws using a timer?</param>
         </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuButton.BunifuButton.ApplyState(Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties)">
+            <summary>
+            Sets a specified state to the button.
+            </summary>
+            <param name="state">
+            The state to apply.
+            </param>
+        </member>
         <member name="M:Bunifu.UI.WinForms.BunifuButton.BunifuButton.PerformClick">
             <summary>
             Generates a 'Click' event for the button.
@@ -449,6 +447,11 @@
         <member name="M:Bunifu.UI.WinForms.BunifuButton.BunifuButton.Reset">
             <summary>
             Resets the control's temporary values to their defaults.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuButton.BunifuButton.Reset(Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties)">
+            <summary>
+            Resets the button's current visual state to another state.
             </summary>
         </member>
         <member name="M:Bunifu.UI.WinForms.BunifuButton.BunifuButton.ResetColors">
@@ -470,6 +473,16 @@
             <see cref="P:Bunifu.UI.WinForms.BunifuButton.BunifuButton.IdleBorderColor"/> properties.
             </summary>
             <param name="invalidate">Redraw the control's surface?</param>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuButton.BunifuButton.IconLeftClick">
+            <summary>
+            Occurs when the Button's left icon is clicked.
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuButton.BunifuButton.IconRightClick">
+            <summary>
+            Occurs when the Button's right icon is clicked.
+            </summary>
         </member>
         <member name="T:Bunifu.UI.WinForms.BunifuButton.BunifuButton.BunifuButtonActionList">
             <summary>
@@ -498,6 +511,22 @@
             <summary> 
             Required method for Designer support - do not modify 
             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
             </summary>
         </member>
         <member name="T:Utilities.BunifuButton.Extensions.ColorExtensions">

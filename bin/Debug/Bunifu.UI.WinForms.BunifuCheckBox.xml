@@ -213,6 +213,107 @@
             Gets the Checkmark's rectangle.
             </summary>
         </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.NewBindingControl(System.Windows.Forms.Control)">
+            <summary>
+            Allows you to easily create a new binding control and automatically adds and binds it to the CheckBox.
+            </summary>
+            <param name="control">The control to create and bind, together with its properties.
+            Note: You can create a label, a button or any other control you'd prefer to bind with.
+            </param>
+            <returns>Bound Control.</returns>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.NewBindingLabel(System.String,System.Drawing.Font,System.Drawing.Color)">
+            <summary>
+            Allows you to easily create a new Label that will automatically be bound with the CheckBox.
+            </summary>
+            <param name="text">The label's Text property value.</param>
+            <param name="font">The label's Font property value.</param>
+            <param name="foreColor">The label's ForeColor property value.</param>
+            <returns>Bound Label.</returns>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.Refresh">
+            <summary>
+            Forces the control to invalidate its client area and immediately redraw itself and any child controls.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.DrawCanvas(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,System.Drawing.Pen,System.Drawing.Color,Bunifu.UI.WinForms.CheckBoxState)">
+            <summary>
+            Draws a user-defined Graphics canvas.
+            </summary>
+            <param name="graphics">The Graphics canvas.</param>
+            <param name="Bounds">The canvas rectangle-bounds.</param>
+            <param name="cornerRadius">The canvas corner-radius.</param>
+            <param name="drawingPen">The pen used to draw objects inside the canvas.</param>
+            <param name="fillColor">Color of the fill.</param>
+            <param name="checkBoxState">The state to manipulate/render.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.DrawCheckmark(System.Drawing.Graphics@,System.Drawing.Pen@,Bunifu.UI.WinForms.CheckBoxState@,System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Draws the Checkmark bitmap.
+            </summary>
+            <param name="graphics">The Graphics to reference.</param>
+            <param name="checkmarkPen">The checkmark pen.</param>
+            <param name="checkBoxState">The current/active CheckBox state.</param>
+            <param name="StartPoint">The start point.</param>
+            <param name="LeftPoint">The left point.</param>
+            <param name="RightPoint">The right point.</param>
+            <param name="width">The checkmark width.</param>
+            <param name="height">The checkmark height.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.RenderCanvas(Bunifu.UI.WinForms.CheckBoxState)">
+            <summary>
+            Renders the control region.
+            </summary>
+            <param name="checkBoxState">Specify the state to be applied to the control.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.PerformCheckStateTransitions">
+            <summary>
+            Performs a check-state-changed color transition within the CheckBox region.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.ShowCheckmark(System.Boolean)">
+            <summary>
+            Displays the checkmark allowing transitioning from the current size to the standard size.
+            </summary>
+            <param name="isRendering">Set to <see cref="!:true"/> if in render mode; otherwise set to <see cref="!:false"/>.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.HideCheckmark(System.Boolean)">
+            <summary>
+            Hide the checkmark allowing transitioning from the current size to the standard size.
+            </summary>
+            <param name="isRendering">Set to <see cref="!:true"/> if in render mode; otherwise set to <see cref="!:false"/>.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.AnimateCheckBox_TransitionCompletedEvent(System.Object,Utilities.BunifuCheckBox.Transitions.Transition.Args)">
+            <summary>
+            This event is called once the transitions have completed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.AnimateChecks_TransitionCompletedEvent(System.Object,Utilities.BunifuCheckBox.Transitions.Transition.Args)">
+            <summary>
+            [Reserved] This event is called once the transitions have completed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.HandleControlLocationBinding(System.Boolean,System.Windows.Forms.Control)">
+            <summary>
+            Handles binding and moving of the internally bound/set control with the CheckBox.
+            </summary>
+            <param name="isInPropertyMode">Is the current call to this method within a property? If so, use the "value" parameter in the setter to pass the control.</param>
+            <param name="boundControl">The selected user control to be bound with the CheckBox.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.IsInDesignMode">
+            <summary>
+            Determines whether the hosting process is in design-mode.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuCheckBox.IsDesignMode">
+            <summary>
+            Determines whether the hosting process is in design-mode as per the LicenseManager module.
+            </summary>
+        </member>
         <member name="E:Bunifu.UI.WinForms.BunifuCheckBox.CheckedChanged">
             <summary>
             Occurs whenever the Checked property has been changed.
@@ -362,107 +463,6 @@
         <member name="P:Bunifu.UI.WinForms.BunifuCheckBox.PositionChangedEventArgs.BindingControlPosition">
             <summary>
             Gets the current position of the bound control in relation to the CheckBox.
-            </summary>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.NewBindingControl(System.Windows.Forms.Control)">
-            <summary>
-            Allows you to easily create a new binding control and automatically adds and binds it to the CheckBox.
-            </summary>
-            <param name="control">The control to create and bind, together with its properties.
-            Note: You can create a label, a button or any other control you'd prefer to bind with.
-            </param>
-            <returns>Bound Control.</returns>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.NewBindingLabel(System.String,System.Drawing.Font,System.Drawing.Color)">
-            <summary>
-            Allows you to easily create a new Label that will automatically be bound with the CheckBox.
-            </summary>
-            <param name="text">The label's Text property value.</param>
-            <param name="font">The label's Font property value.</param>
-            <param name="foreColor">The label's ForeColor property value.</param>
-            <returns>Bound Label.</returns>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.Refresh">
-            <summary>
-            Forces the control to invalidate its client area and immediately redraw itself and any child controls.
-            </summary>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.DrawCanvas(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,System.Drawing.Pen,System.Drawing.Color,Bunifu.UI.WinForms.CheckBoxState)">
-            <summary>
-            Draws a user-defined Graphics canvas.
-            </summary>
-            <param name="graphics">The Graphics canvas.</param>
-            <param name="Bounds">The canvas rectangle-bounds.</param>
-            <param name="cornerRadius">The canvas corner-radius.</param>
-            <param name="drawingPen">The pen used to draw objects inside the canvas.</param>
-            <param name="fillColor">Color of the fill.</param>
-            <param name="checkBoxState">The state to manipulate/render.</param>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.DrawCheckmark(System.Drawing.Graphics@,System.Drawing.Pen@,Bunifu.UI.WinForms.CheckBoxState@,System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Int32,System.Int32)">
-            <summary>
-            Draws the Checkmark bitmap.
-            </summary>
-            <param name="graphics">The Graphics to reference.</param>
-            <param name="checkmarkPen">The checkmark pen.</param>
-            <param name="checkBoxState">The current/active CheckBox state.</param>
-            <param name="StartPoint">The start point.</param>
-            <param name="LeftPoint">The left point.</param>
-            <param name="RightPoint">The right point.</param>
-            <param name="width">The checkmark width.</param>
-            <param name="height">The checkmark height.</param>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.RenderCanvas(Bunifu.UI.WinForms.CheckBoxState)">
-            <summary>
-            Renders the control region.
-            </summary>
-            <param name="checkBoxState">Specify the state to be applied to the control.</param>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.PerformCheckStateTransitions">
-            <summary>
-            Performs a check-state-changed color transition within the CheckBox region.
-            </summary>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.ShowCheckmark(System.Boolean)">
-            <summary>
-            Displays the checkmark allowing transitioning from the current size to the standard size.
-            </summary>
-            <param name="isRendering">Set to <see cref="!:true"/> if in render mode; otherwise set to <see cref="!:false"/>.</param>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.HideCheckmark(System.Boolean)">
-            <summary>
-            Hide the checkmark allowing transitioning from the current size to the standard size.
-            </summary>
-            <param name="isRendering">Set to <see cref="!:true"/> if in render mode; otherwise set to <see cref="!:false"/>.</param>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.AnimateCheckBox_TransitionCompletedEvent(System.Object,Utilities.BunifuCheckBox.Transitions.Transition.Args)">
-            <summary>
-            This event is called once the transitions have completed.
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.AnimateChecks_TransitionCompletedEvent(System.Object,Utilities.BunifuCheckBox.Transitions.Transition.Args)">
-            <summary>
-            [Reserved] This event is called once the transitions have completed.
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.HandleControlLocationBinding(System.Boolean,System.Windows.Forms.Control)">
-            <summary>
-            Handles binding and moving of the internally bound/set control with the CheckBox.
-            </summary>
-            <param name="isInPropertyMode">Is the current call to this method within a property? If so, use the "value" parameter in the setter to pass the control.</param>
-            <param name="boundControl">The selected user control to be bound with the CheckBox.</param>
-        </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuCheckBox.IsInDesignMode">
-            <summary>
-            Determines whether the hosting process is in design-mode.
-            </summary>
-        </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuCheckBox.IsDesignMode">
-            <summary>
-            Determines whether the hosting process is in design-mode as per the LicenseManager module.
             </summary>
         </member>
         <member name="T:Bunifu.UI.WinForms.BunifuCheckBox.BunifuCheckBoxActionList">

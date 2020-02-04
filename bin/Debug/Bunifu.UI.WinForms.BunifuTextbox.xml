@@ -1,259 +1,265 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Bunifu.UI.WinForms.BunifuTextbox</name>
+        <name>Bunifu.UI.WinForms.BunifuTextBox</name>
     </assembly>
     <members>
-        <member name="T:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox">
+        <member name="T:Bunifu.UI.WinForms.BunifuTextBox">
             <summary>
             Provides enhanced TextBox with customized styling 
             properties and features for greater flexibility.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.#ctor">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.#ctor">
             <summary>
-            Creates a new <see cref="N:Bunifu.UI.WinForms.BunifuTextbox"/> control.
+            Creates a new <see cref="!:BunifuTextbox"/> control.
             </summary>
         </member>
-        <member name="T:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style">
+        <member name="T:Bunifu.UI.WinForms.BunifuTextBox._Style">
             <summary>
             Provides various styling options for Bunifu TextBox.
             </summary>
         </member>
-        <member name="F:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu">
+        <member name="F:Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu">
             <summary>
             Uses the default Bunifu TextBox design.
             </summary>
         </member>
-        <member name="F:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Material">
+        <member name="F:Bunifu.UI.WinForms.BunifuTextBox._Style.Material">
             <summary>
             Provides a custom Material TextBox design.
             </summary>
         </member>
-        <member name="T:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.state">
+        <member name="T:Bunifu.UI.WinForms.BunifuTextBox.state">
             <summary>
             Provides various states supported by Bunifu TextBox.
             </summary>
         </member>
-        <member name="F:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.state.idle">
+        <member name="F:Bunifu.UI.WinForms.BunifuTextBox.state.idle">
             <summary>
             Represents the idle state.
             </summary>
         </member>
-        <member name="F:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.state.hover">
+        <member name="F:Bunifu.UI.WinForms.BunifuTextBox.state.hover">
             <summary>
             Represents the hover state.
             </summary>
         </member>
-        <member name="F:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.state.active">
+        <member name="F:Bunifu.UI.WinForms.BunifuTextBox.state.active">
             <summary>
             Represents the active state.
             </summary>
         </member>
-        <member name="F:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.state.disabled">
+        <member name="F:Bunifu.UI.WinForms.BunifuTextBox.state.disabled">
             <summary>
             Represents the disabled state.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.AnimationSpeed">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.AnimationSpeed">
             <summary>
             Gets or sets the Button's animation speed (in milliseconds) 
             when moving from one state to another.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.TextMarginLeft">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.TextMarginLeft">
             <summary>
             Gets or sets the TextBox's left margin.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.TextMarginBottom">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.TextMarginBottom">
             <summary>
             Gets or sets the TextBox's bottom margin.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.TextMarginTop">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.TextMarginTop">
             <summary>
             Gets or sets the TextBox's top margin.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.IconPadding">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.IconPadding">
             <summary>
             Gets or sets the TextBox's padding for
             both the left and the right icon.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BorderThickness">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.BorderThickness">
             <summary>
             Gets or sets the TextBox's border thickness.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BorderRadius">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.BorderRadius">
             <summary>
             Gets or sets the the TextBox's border radius.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.PlaceholderText">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.PlaceholderText">
             <summary>
             Gets or sets the TextBox's placeholder.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.DefaultText">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.DefaultText">
             <summary>
             Gets or sets the text input.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.IconLeft">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.IconLeft">
             <summary>
             Gets or sets the TextBox's left icon.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.IconRight">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.IconRight">
             <summary>
             Gets or sets the TextBox's right icon.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.PlaceholderForeColor">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.PlaceholderForeColor">
             <summary>
             Gets or sets the placeholder's ForeColor.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.ForeColor">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.ForeColor">
             <summary>
             Gets or sets the TextBox's foreground color.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BorderColorDisabled">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.BorderColorDisabled">
             <summary>
             Gets or sets the TextBox's border color when disabled.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BorderColorIdle">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.BorderColorIdle">
             <summary>
             Gets or sets the TextBox's border color when idle.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.FillColor">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.FillColor">
             <summary>
             Gets or sets the TextBox's fill 
             color or inner-background color.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BorderColorHover">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.BorderColorHover">
             <summary>
             Gets or sets the TextBox's  
             border color on mouse hover.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BorderColorActive">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.BorderColorActive">
             <summary>
             Gets or sets the TextBox's border 
             color when active or focused.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.IconRightCursor">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.IconRightCursor">
             <summary>
             Gets or sets the TextBox's right icon cursor.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.IconLeftCursor">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.IconLeftCursor">
             <summary>
             Gets or sets the TextBox's left icon cursor.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Style">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.Style">
             <summary>
             Gets or sets the TextBox style.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Cursor">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.Cursor">
             <summary>
             Represents the image used 
             to paint the mouse pointer.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.DefaultFont">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.DefaultFont">
             <summary>
             Gets or sets the font of the 
             text displayed by the control.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.OnIdleState">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.OnIdleState">
             <summary>
             Gets or sets the Textbox's idle state design.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.OnHoverState">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.OnHoverState">
             <summary>
             Gets or sets the Textbox's hover state design.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.OnActiveState">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.OnActiveState">
             <summary>
             Gets or sets the Textbox's active state design.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.OnDisabledState">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.OnDisabledState">
             <summary>
             Gets or sets the Textbox's disabled state design.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Input">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.Input">
             <summary>
             Gets the hosted input area.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.LeftIcon">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.LeftIcon">
             <summary>
             Gets the left icon.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.RightIcon">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.RightIcon">
             <summary>
             Gets the right icon.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.isOnFocused">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.isOnFocused">
             <summary>
             Gets a value indicating whether this instance is on focused.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Text">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.Text">
             <summary>
             Gets or sets the text associated with this control.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.TextPlaceholder">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.TextPlaceholder">
             <summary>
             Gets or sets the TextBox's placeholder.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BackColor">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.BackColor">
             <summary>
             Gets or sets the control's BackColor.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BackgroundImage">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.BackgroundImage">
             <summary>
             Gets or sets the control's BackgroundImage.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.DrawingRectangle">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.DrawingRectangle">
             <summary>
             Gets the TextBox's drawing rectangle.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.CreateParams">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.Focused">
+            <summary>
+            Gets a value indicating whether 
+            the control has input focus.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.CreateParams">
             <summary>
             Gets the list of created control parameters.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.ScrollBars">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.ScrollBars">
             <summary>
             Indicates which scroll bars will be shown 
             when the TextBox is set to multiline.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.AutoCompleteCustomSource">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.AutoCompleteCustomSource">
             <summary>
             Gets or sets the automatic complete custom source.
             </summary>
@@ -261,153 +267,153 @@
             The automatic complete custom source.
             </value>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Font">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.Font">
             <summary>
             Gets or sets the font of the text displayed by the control.
             </summary>
         </member>
-        <member name="T:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties">
+        <member name="T:Bunifu.UI.WinForms.BunifuTextBox.StateProperties">
             <summary>
             Provides options for use when creating a 
             list of properties for use when defining a  
             control's various activity states.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties.ForeColor">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.StateProperties.ForeColor">
             <summary>
             Gets or sets the control's foreground color.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties.PlaceholderForeColor">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.StateProperties.PlaceholderForeColor">
             <summary>
             Gets or sets the control's placeholder foreground color.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties.FillColor">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.StateProperties.FillColor">
             <summary>
             Gets or sets the control's background/fill color.
             </summary>
         </member>
-        <member name="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties.BorderColor">
+        <member name="P:Bunifu.UI.WinForms.BunifuTextBox.StateProperties.BorderColor">
             <summary>
             Gets or sets the control's border color.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties.ToString">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.StateProperties.ToString">
             <summary>
             Returns a string containing the object's 
             properties and their values.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.TextChange">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.TextChange">
             <summary>
             Occurs when the 'Text' property changes.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.TextChanged">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.TextChanged">
             <summary>
             Occurs when the 'Text' property changes.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.AcceptsTabChanged">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.AcceptsTabChanged">
             <summary>
             Occurs when the property 'AcceptsTab' changes.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BorderStyleChanged">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.BorderStyleChanged">
             <summary>
             Occurs when the 'BorderStyle' property changes.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.HideSelectionChanged">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.HideSelectionChanged">
             <summary>
             Occurs when the 'HideSelection' property changes.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.ModifiedChanged">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.ModifiedChanged">
             <summary>
             Occurs when the 'Modified' property changes.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.ReadOnlyChanged">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.ReadOnlyChanged">
             <summary>
             Occurs when the 'ReadOnly' property changes.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.TextAlignChanged">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.TextAlignChanged">
             <summary>
             Occurs when the 'TextAlign' property changes.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.OnIconLeftClick">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.OnIconLeftClick">
             <summary>
             Occurs when the left icon is clicked.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.OnIconRightClick">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.OnIconRightClick">
             <summary>
             Occurs when the right icon is clicked.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.KeyDown">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.KeyDown">
             <summary>
             Occurs when a key is first pressed.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.KeyPress">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.KeyPress">
             <summary>
             Occurs when the control has focus and 
             the user presses and releases a key.
             </summary>
         </member>
-        <member name="E:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.KeyUp">
+        <member name="E:Bunifu.UI.WinForms.BunifuTextBox.KeyUp">
             <summary>
             Occurs when a key is released.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Focus">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.Focus">
             <summary>
             Sets input focus to the control.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.ResetColors">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.ResetColors">
             <summary>
             Resets the control's assigned colors.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Refresh">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.Refresh">
             <summary>
             Redraws the control's layout.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.ResizeControl">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.ResizeControl">
             <summary>
             Adjusts the control to its appropriate size.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Reset">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.Reset">
             <summary>
             Inserts default placeholder, assigns placeholder 
             style and sets cursor to the first position.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.ResetText">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.ResetText">
             <summary>
-            Resets the <see cref="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Text"/> property to its default value.
+            Resets the <see cref="P:Bunifu.UI.WinForms.BunifuTextBox.Text"/> property to its default value.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Clear">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.Clear">
             <summary>
             Clears all text from the text box control.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.ClearUndo">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.ClearUndo">
             <summary>
             Clears information about the most recent 
             operation from the undo buffer of the text box.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.AppendText(System.String)">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.AppendText(System.String)">
             <summary>
             Appends text to the current text of a text box.
             </summary>
@@ -416,25 +422,25 @@
             contents of the text box.
             </param>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Copy">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.Copy">
             <summary>
             Copies the current selection in 
             the text box to the Clipboard.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Cut">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.Cut">
             <summary>
             Moves the current selection in 
             the text box to the Clipboard.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.DeselectAll">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.DeselectAll">
             <summary>
-            Specifies that the value of the <see cref="P:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.SelectionLength"/> 
+            Specifies that the value of the <see cref="P:Bunifu.UI.WinForms.BunifuTextBox.SelectionLength"/> 
             property is zero so that no characters are selected in the control.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.GetCharFromPosition(System.Drawing.Point)">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.GetCharFromPosition(System.Drawing.Point)">
             <summary>
             Retrieves the character that is closest to 
             the specified location within the control.
@@ -442,7 +448,7 @@
             <param name="pt">The location from which to seek the nearest character.</param>
             <returns>The character at the specified location.</returns>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.GetCharIndexFromPosition(System.Drawing.Point)">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.GetCharIndexFromPosition(System.Drawing.Point)">
             <summary>
             Retrieves the index of the character 
             nearest to the specified location.
@@ -453,7 +459,7 @@
             at the specified location.
             </returns>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.GetFirstCharIndexFromLine(System.Int32)">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.GetFirstCharIndexFromLine(System.Int32)">
             <summary>
             Retrieves the index of the first character of a given line.
             </summary>
@@ -463,7 +469,7 @@
             character in the specified line.
             </returns>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.GetFirstCharIndexOfCurrentLine">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.GetFirstCharIndexOfCurrentLine">
             <summary>
             Retrieves the index of the first character of the current line.
             </summary>
@@ -472,7 +478,7 @@
             index in the current line.
             </returns>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.GetLineFromCharIndex(System.Int32)">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.GetLineFromCharIndex(System.Int32)">
             <summary>
             Retrieves the line number from the specified 
             character position within the text of the control.
@@ -483,7 +489,7 @@
             the character index is located.
             </returns>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.GetPositionFromCharIndex(System.Int32)">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.GetPositionFromCharIndex(System.Int32)">
             <summary>
             Retrieves the location within the control 
             at the specified character index.
@@ -497,19 +503,19 @@
             within the client rectangle of the control.
             </returns>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Paste">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.Paste">
             <summary>
             Replaces the current selection in the text box 
             with the contents of the Clipboard.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.ScrollToCaret">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.ScrollToCaret">
             <summary>
             Scrolls the contents of the control 
             to the current caret position.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Select(System.Int32,System.Int32)">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.Select(System.Int32,System.Int32)">
             <summary>
             Selects a range of text in the text box.
             </summary>
@@ -521,50 +527,50 @@
             The number of characters to select.
             </param>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.SelectAll">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.SelectAll">
             <summary>
             Selects all text in the text box.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.ToString">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.ToString">
             <summary>
-            Returns a string that represents the <see cref="T:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox"/> control.
+            Returns a string that represents the <see cref="T:Bunifu.UI.WinForms.BunifuTextBox"/> control.
             </summary>
             <returns>
-            A string that represents the current <see cref="T:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox"/>. 
-            The string includes the type and the <see cref="T:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox"/> 
+            A string that represents the current <see cref="T:Bunifu.UI.WinForms.BunifuTextBox"/>. 
+            The string includes the type and the <see cref="T:Bunifu.UI.WinForms.BunifuTextBox"/> 
             property of the control.
             </returns>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Undo">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.Undo">
             <summary>
             Undoes the last edit operation in the text box.
             </summary>
         </member>
-        <member name="T:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BunifuControlActionList">
+        <member name="T:Bunifu.UI.WinForms.BunifuTextBox.BunifuControlActionList">
             <summary>
-            Initializes a new instance of the <see cref="T:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BunifuControlActionList"/> class.
+            Initializes a new instance of the <see cref="T:Bunifu.UI.WinForms.BunifuTextBox.BunifuControlActionList"/> class.
             </summary>
             <seealso cref="T:System.ComponentModel.Design.DesignerActionList" />
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.BunifuControlActionList.GetSortedActionItems">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.BunifuControlActionList.GetSortedActionItems">
             <summary>
             Implementation of this abstract method creates Smart Tag items,
             associates their targets, and collects them into a list.
             </summary>
         </member>
-        <member name="F:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.components">
+        <member name="F:Bunifu.UI.WinForms.BunifuTextBox.components">
             <summary> 
             Required designer variable.
             </summary>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.Dispose(System.Boolean)">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.Dispose(System.Boolean)">
             <summary> 
             Clean up any resources being used.
             </summary>
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="M:Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.InitializeComponent">
+        <member name="M:Bunifu.UI.WinForms.BunifuTextBox.InitializeComponent">
             <summary> 
             Required method for Designer support - do not modify 
             the contents of this method with the code editor.
