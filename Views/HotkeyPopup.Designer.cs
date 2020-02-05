@@ -298,6 +298,7 @@
             this.bunifuToolTip1.SetToolTipTitle(this.txtConversion, "");
             this.txtConversion.UseSystemPasswordChar = false;
             this.txtConversion.WordWrap = true;
+            this.txtConversion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtConversion_KeyDown);
             // 
             // bunifuFormDock1
             // 

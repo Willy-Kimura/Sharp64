@@ -139,7 +139,18 @@ namespace WK.Apps.Sharp64.Views
 
         private void Popup_Deactivate(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void TxtConversion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.S)
+            {
+                SwapSides();
+
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
 
         private void txtHotkey_TextChanged(object sender, EventArgs e)
