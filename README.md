@@ -1,7 +1,7 @@
 # Sharp64 - Base64 Encoder/Decoder
 [![wk-donate](https://img.shields.io/badge/BuyMeACoffee-Donate-orange.svg)](https://www.buymeacoffee.com/willykimura)
 
-**Sharp64** is a .NET utility that provides [Base64]( https://en.wikipedia.org/wiki/Base64 ) encoding/decoding for texts, files, and images.
+**Sharp64** is a beautiful .NET utility that provides [Base64]( https://en.wikipedia.org/wiki/Base64 ) encoding/decoding for texts, files, and images.
 
 ![sharp64-preview](Assets/Previews/sharp64-preview.gif)
 
