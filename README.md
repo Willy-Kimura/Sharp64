@@ -15,7 +15,7 @@
 
 - *Image Encoding*
 
-![sharp64-image-encoding](Assets/Previews/sharp64-image-encoding.png)
+![sharp64-image-encoding](Assets/Previews/sharp64-image-encoding.PNG)
 
 - *Settings Window*
 
