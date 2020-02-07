@@ -58,10 +58,11 @@ To build the project, you'll need:
 
 - [Visual Studio 2012](https://visualstudio.microsoft.com/downloads/) or higher.
 - A [Bunifu UI](https://bunifuframework.com/ref/Willy) license. (*Use the discount code [WK20]( https://bunifuframework.com/pricing) to get a 20% discount offer!*)
-- Microsoft [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642).
 - Install the fonts:
   - [Product Sans](https://befonts.com/product-sans-font.html)
   - [Cascadia Code]( https://github.com/microsoft/cascadia-code/releases )
+
+The project targets Microsoft [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642).
 
 
 
