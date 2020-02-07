@@ -3,9 +3,10 @@
 /*
  * Developer: Willy Kimura.
  * Product:   Sharp64 - A Base64 Encoder/Decoder
+ * License:   MIT
  * 
  * A product of Willy Kimura.
- * Copyright (c) 2019.
+ * Copyright (c) 2020.
  * 
  */
 
