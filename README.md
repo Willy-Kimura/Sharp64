@@ -1,46 +1,67 @@
 # Sharp64 - Base64 Encoder/Decoder
 [![wk-donate](https://img.shields.io/badge/BuyMeACoffee-Donate-orange.svg)](https://www.buymeacoffee.com/willykimura)
 
-![sharp64](/Assets/sharp64-text-encoding.png)
+**Sharp64** is a .NET utility that provides [Base64]( https://en.wikipedia.org/wiki/Base64 ) encoding/decoding for texts, files, and images.
 
-**ProTimer** is a .NET Windows Countdown application template that comes bundled with the standard countdown features. You can extend it even further with more customization options and features such as theming and even your own *About* window.
+![sharp64-preview](Assets/Previews/sharp64-preview.gif)
+
+- *Startup Window*
+
+![sharp64-startup-window](Assets/Previews/sharp64-window.png)
+
+- *Text Encoding*
+
+![sharp64-text-encoding](Assets/Previews/sharp64-text-encoding.png)
+
+- *Image Encoding*
+
+![sharp64-image-encoding](Assets/Previews/sharp64-image-encoding.png)
+
+- *Settings Window*
+
+![sharp64-settings](Assets/Previews/sharp64-settings.png)
+
+- *About Window*
+
+![sharp64-about](Assets/Previews/sharp64-about.png)
 
 # Features
 
 - Minimalist design.
 
-- Timer-step configuration (milliseconds, seconds, hours).
+- Encodes/decodes texts, files, and images.
 
-- **Start**, **Stop** and **Reset** countdown options.
+- Can save encodings as files - Text encodings (.*enc*), Image encodings (.*enci*)
 
-- Provides shortcut keys for priority features e.g. *Play/Pause*.
+- Allows encoding/decoding of texts from any application/website using a customizable hotkey.
+
+- Provides shortcut keys for priority features e.g. *Saving encodings*.
 
   > Available Shortcuts:
   >
-  > | Hotkeys    | Function                  |
-  > | ---------- | ------------------------- |
-  > | `Spacebar` | Plays or Pauses the timer |
-  > | `X`        | Stops the timer           |
+  > | Hotkeys    | Function                 |
+  > | ---------- | ------------------------ |
+  > | `Ctrl`+`O` | Opens files & encodings  |
+  > | `Ctrl`+`S` | Saves an encoding        |
+  > | `Ctrl`+`I` | Shows/hides Image Viewer |
+  > | `Ctrl` `+` | Zoom-in text             |
+  > | `Ctrl` `-` | Zoom-out text            |
+  > | `Escape`   | Minimizes window         |
 
 - Provides inbuilt settings you can utilize for saving users' preferences.
 
-- Automated installation of missing fonts using the [FontsInstaller](https://github.com/Willy-Kimura/FontsInstaller) library.
-
 - Default app icon, libraries, and other resources are included.
 
-# Requirements 
+# Requirements
 
 To build the project, you'll need:
 
 - [Visual Studio 2012](https://visualstudio.microsoft.com/downloads/) or higher.
-- A [Bunifu UI](https://bunifuframework.com/ref/Willy) license.
-- Install the fonts: 
+- A [Bunifu UI](https://bunifuframework.com/ref/Willy) license. (*Use the discount code [WK20]( https://bunifuframework.com/ pricing) to get a 20% discount offer!*)
+- Microsoft [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642).
+- Install the fonts:
   - [Product Sans](https://befonts.com/product-sans-font.html)
   - [Cascadia Code]( https://github.com/microsoft/cascadia-code/releases )
-
-
-
-The project supports [.NET Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=17718) and higher.
 
 
 
