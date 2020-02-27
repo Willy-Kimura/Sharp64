@@ -33,7 +33,7 @@
 
 - Can save encodings as files - Text encodings (.*enc*), Image encodings (.*enci*)
 
-- Allows encoding/decoding of texts from any application/website using a customizable hotkey.
+- Allows encoding/decoding of texts from any application or website using a customizable hotkey.
 
 - Provides shortcut keys for priority features e.g. *Saving encodings*.
 

@@ -27,6 +27,7 @@ using AutoUpdaterDotNET;
 using Bunifu.UI.WinForms;
 
 using WK.Apps.Sharp64.Helpers;
+using WK.Libraries.FontsInstallerNS;
 using WK.Libraries.HotkeyListenerNS;
 using WK.Apps.Sharp64.Models.Settings;
 using WK.Apps.TranslatrNS.Controllers.Settings;
@@ -767,6 +768,16 @@ namespace WK.Apps.Sharp64.Views
             catch (Exception) { }
         }
 
+        /// <summary>
+        /// Installs all required fonts on startup.
+        /// </summary>
+        public void InstallRequiredFonts()
+        {
+            var fontsInstaller = new FontsInstaller();
+
+            fontsInstaller.InstallFonts($@"{Application.StartupPath}\Resources\Fonts");
+        }
+
         #endregion
 
         #endregion
@@ -775,6 +786,8 @@ namespace WK.Apps.Sharp64.Views
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            InstallRequiredFonts();
+
             // This will simply animate 
             // the window when loading.
             Show();
